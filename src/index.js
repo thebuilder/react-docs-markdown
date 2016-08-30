@@ -34,7 +34,7 @@ function addProps(props) {
  * @param name {string} Name/title to append on the page
  * @returns {string}
  */
-export default function docsToMarkdown(api, name = '') {
+function docsToMarkdown(api, name = '') {
   let output = '';
   if (name) output += `# ${name}\n`;
   if (api.description) output += `\n${api.description}\n`;
@@ -42,3 +42,6 @@ export default function docsToMarkdown(api, name = '') {
 
   return output;
 }
+
+
+module.exports = docsToMarkdown;
