@@ -4,7 +4,7 @@ import docsToMarkdown from '../src/index';
 
 describe('Docs to markdown', () => {
   it('should convert caselist', () => {
-    const result = docsToMarkdown('CaseList', require('./input/CaseList.json'));
-    expect(result).toBeAn('string');
+    const result = docsToMarkdown(require('./input/CaseList.json'), 'CaseList');
+    expect(result).toBeA('string');
   });
 });
