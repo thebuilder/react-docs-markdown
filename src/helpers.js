@@ -56,3 +56,7 @@ export function isComplexType(name) {
       return false;
   }
 }
+
+export function blockquote(input) {
+  return input.replace(/\n/g, '\n> ');
+}

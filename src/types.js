@@ -1,5 +1,5 @@
 import table from 'markdown-table';
-import { getKey, getTypeName, isComplexType } from './helpers';
+import { getKey, getTypeName, isComplexType, blockquote} from './helpers';
 
 export function describeType(type, level = 0) {
   switch (type.name) {
@@ -29,7 +29,10 @@ export function describeSubTypes(types, level = 0) {
     if (isComplexType(type.name)) {
       const result = describeType(type, level);
       if (result) {
-        if (level === 0 && index) subTypes += `\n${'-'.repeat(80)}\n`;
+        // Generate a horizontal ruler
+        if (level === 0 && index > 0) subTypes += `\n${'-'.repeat(80)}\n`;
+
+        // Output a header, with the correct level
         subTypes += `\n###${'#'.repeat(level)} ${key}\nType: _${getTypeName(type)}_\n`;
         if (prop.description) subTypes += `\n${prop.description}\n`;
 
@@ -57,10 +60,9 @@ export function describeSubTypes(types, level = 0) {
         }
 
         subTypes += `${result}`;
+        index += 1;
       }
     }
-
-    index += 1;
   }
 
   return subTypes;
@@ -95,6 +97,9 @@ export function shape(types, level) {
 }
 
 export function union(types, level) {
-  let index = 1;
-  return types.reduce((output, type) => `${output}\n**${index++}) ${getTypeName(type)}**\n${describeType(type, level)}`, '');
+  return types.reduce((output, type) => {
+    let result = `\n####${'#'.repeat(level)} ${getTypeName(type)}\n`;
+    result += blockquote(describeType(type, level + 1));
+    return output + result;
+  }, '');
 }
