@@ -60,3 +60,12 @@ export function isComplexType(name) {
 export function blockquote(input) {
   return input.replace(/\n/g, '\n> ');
 }
+
+
+export function filterProps(name, prop, {excludeKey, excludeType, excludeDescription}) {
+  if (excludeKey && excludeKey.test(name)) return false;
+  if (excludeType && excludeType.test(prop.type.name || prop.type)) return false;
+  if (excludeDescription && excludeDescription.test(prop.description)) return false;
+
+  return true;
+}

@@ -4,10 +4,14 @@ React Docs Markdown
 At the moment this is a simple package, that takes the output from [react-docgen](https://github.com/reactjs/react-docgen), and returns it as Markdown. You can then save it to a file, append more content, or whatever you need.
 
 ### API
-#### docsToMarkdown(api: object, name: string)
+#### docsToMarkdown(api: object, name: string, options: Object)
 
 * **api** - The output from react-docgen.
 * **name** - Component name to set as page title
+* **options** _(Optional)_
+  * excludeKeys
+  * excludeTypes
+  * excludeDescription
 
 
 ### Example
@@ -23,3 +27,6 @@ fs.writeFile('docs/button.md', md, (err) => {
   if (err) throw err;
 });
 ```
+
+## Publishing
+Use [np](https://www.npmjs.com/package/np) when publishing a new version to ensure everything is done correctly. 

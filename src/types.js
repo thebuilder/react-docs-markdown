@@ -79,13 +79,16 @@ export function enumType(values) {
 export function shape(types, level) {
   let output = '';
   const keys = Object.keys(types);
-  const tableValues = [['Name', 'Type', 'Required']];
 
-  for (const key of keys) {
-    const type = types[key];
-    tableValues.push([getKey(key, type), getTypeName(type), type.required]);
-  }
-  output += `\n${table(tableValues)}\n`;
+  const items = [
+    ['Name', 'Type', 'Required'],
+    ...keys.map((key) => {
+      const type = types[key];
+      return [getKey(key, type), getTypeName(type), type.required];
+    }),
+  ];
+
+  output += `\n${table(items)}\n`;
 
   const subTypes = describeSubTypes(types, level + 1);
 

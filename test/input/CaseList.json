@@ -161,6 +161,20 @@
         "value": "'small'",
         "computed": false
       }
+    },
+    "component": {
+      "type": {
+        "name": "node"
+      },
+      "required": false,
+      "description": "@internal Use another root component."
+    },
+    "backgroundColor": {
+      "type": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "@custom-exclude"
     }
   }
 }
