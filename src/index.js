@@ -12,7 +12,7 @@ const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
  */
 function addProps(props, options) {
   if (!props) return '## No props';
-  const keys = Object.keys(props).filter((key) => filterProps(key, props[key], options));
+  const keys = Object.keys(props).filter(key => filterProps(key, props[key], options));
   const filteredProps = keys.reduce((last, key) => ({...last, [key]: props[key]}), {});
 
   let output = '\n## Props\n';

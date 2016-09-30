@@ -13,7 +13,7 @@ export function getDefaultValue(prop) {
     }
   }
 
-  if (value.hasOwnProperty('value')) {
+  if (typeof value.value !== 'undefined' && value.value) {
     return value.value;
   }
   return value;
