@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "Overview of all the components",
   "props": {
     "items": {
       "type": {

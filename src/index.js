@@ -11,6 +11,7 @@ const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
  * @returns {string}
  */
 function addProps(props, options) {
+  if (!props) return '## No props';
   const keys = Object.keys(props).filter((key) => filterProps(key, props[key], options));
   const filteredProps = keys.reduce((last, key) => ({...last, [key]: props[key]}), {});
 
@@ -67,7 +68,7 @@ function toRegExp(input) {
 function docsToMarkdown(api, name = '', options = {}) {
   let output = '';
   if (name) output += `# ${name}\n`;
-  if (api.description) output += `\n${api.description}\n`;
+  if (api.description) output += `\n${api.description}\n\n`;
   output += addProps(api.props, normalizeOptions(options));
 
   return output;
