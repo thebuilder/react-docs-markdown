@@ -37,21 +37,21 @@
     "babel": "6.5.2",
     "babel-cli": "6.16.0",
     "babel-eslint": "7.0.0",
-    "babel-jest": "15.0.0",
+    "babel-jest": "16.0.0",
     "babel-preset-es2015": "6.16.0",
-    "babel-preset-stage-2": "6.16.0",
+    "babel-preset-stage-2": "6.17.0",
     "babel-register": "6.16.3",
-    "cross-env": "3.0.0",
-    "eslint": "3.6.1",
+    "cross-env": "3.1.3",
+    "eslint": "3.8.1",
     "eslint-config-airbnb": "12.0.0",
-    "eslint-plugin-import": "2.0.0",
-    "eslint-plugin-jsx-a11y": "2.2.2",
-    "eslint-plugin-react": "6.3.0",
-    "jest": "15.1.1",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.4.1",
+    "jest": "16.0.2",
     "rimraf": "2.5.4"
   },
   "dependencies": {
-    "lodash": "4.16.2",
+    "lodash": "4.16.4",
     "markdown-table": "1.0.0"
   }
 }
