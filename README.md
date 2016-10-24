@@ -1,5 +1,9 @@
 React Docs Markdown
 ===========================
+<!-- Build Status -->
+<a href="https://travis-ci.org/thebuilder/react-docs-markdown">
+  <img src="https://travis-ci.org//thebuilder/react-docs-markdown.svg" alt="Build Status" />
+</a>
 
 At the moment this is a simple package, that takes the output from [react-docgen](https://github.com/reactjs/react-docgen), and returns it as Markdown. You can then save it to a file, append more content, or whatever you need.
 
