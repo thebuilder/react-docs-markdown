@@ -21,7 +21,7 @@ export function describeSubTypes(types, level = 0) {
 
   let subTypes = '';
   let index = 0;
-  for (const key of keys) {
+  keys.forEach((key) => {
     const prop = types[key];
     // Type can either be on the prop, or in the type field depending on depth.
     const type = prop.type || prop;
@@ -63,7 +63,7 @@ export function describeSubTypes(types, level = 0) {
         index += 1;
       }
     }
-  }
+  });
 
   return subTypes;
 }
