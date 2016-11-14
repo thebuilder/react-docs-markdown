@@ -50,7 +50,7 @@
     "rimraf": "2.5.4"
   },
   "dependencies": {
-    "lodash": "4.16.6",
+    "lodash": "4.17.0",
     "markdown-table": "1.0.0"
   }
 }
