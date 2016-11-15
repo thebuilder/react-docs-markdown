@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "env": {
     "jest": true
   },
@@ -13,6 +13,6 @@
     "import/no-named-as-default": 0,
     "max-len": 0,
     "object-curly-spacing": 0,
-    "spaced-comment": ["error", "always"],
+    "spaced-comment": ["error", "always"]
   }
 }
