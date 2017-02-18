@@ -45,7 +45,7 @@
     "eslint-config-airbnb-base": "11.0.0",
     "eslint-plugin-import": "2.2.0",
     "jest": "18.1.0",
-    "rimraf": "2.5.4"
+    "rimraf": "2.6.0"
   },
   "dependencies": {
     "lodash": "4.17.4",
