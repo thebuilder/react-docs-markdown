@@ -1,5 +1,7 @@
 React Docs Markdown
 ===========================
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/thebuilder/react-docs-markdown.svg)](https://greenkeeper.io/)
 <!-- Build Status -->
 <a href="https://travis-ci.org/thebuilder/react-docs-markdown">
   <img src="https://travis-ci.org/thebuilder/react-docs-markdown.svg" alt="Build Status" />
