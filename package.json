@@ -33,22 +33,22 @@
   },
   "homepage": "https://github.com/thebuilder/react-docs-markdown#readme",
   "devDependencies": {
-    "babel": "6.5.2",
-    "babel-cli": "6.18.0",
-    "babel-eslint": "7.1.1",
-    "babel-jest": "18.0.0",
-    "babel-preset-latest": "6.16.0",
-    "babel-preset-stage-2": "6.18.0",
-    "babel-register": "6.18.0",
-    "cross-env": "3.1.3",
-    "eslint": "3.12.2",
-    "eslint-config-airbnb-base": "11.0.0",
+    "babel": "6.23.0",
+    "babel-cli": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "19.0.0",
+    "babel-preset-latest": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.24.1",
+    "cross-env": "4.0.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "11.1.3",
     "eslint-plugin-import": "2.2.0",
-    "jest": "18.1.0",
-    "rimraf": "2.5.4"
+    "jest": "19.0.2",
+    "rimraf": "2.6.1"
   },
   "dependencies": {
     "lodash": "4.17.4",
-    "markdown-table": "1.0.0"
+    "markdown-table": "1.1.0"
   }
 }
