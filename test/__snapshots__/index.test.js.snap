@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Docs to markdown Exclude description should exclude type with array 1`] = `
 "# CaseList
 
@@ -8,7 +10,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -50,10 +52,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 
 --------------------------------------------------------------------------------
 
@@ -74,22 +76,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -103,7 +105,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -145,10 +147,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 
 --------------------------------------------------------------------------------
 
@@ -169,22 +171,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -198,7 +200,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -240,10 +242,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 
 --------------------------------------------------------------------------------
 
@@ -264,22 +266,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -334,10 +336,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 "
 `;
 
@@ -392,10 +394,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 "
 `;
 
@@ -450,10 +452,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 "
 `;
 
@@ -466,7 +468,7 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
@@ -488,22 +490,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -516,7 +518,7 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
@@ -538,22 +540,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -566,7 +568,7 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
@@ -588,22 +590,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
@@ -617,7 +619,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | \'small\' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String  |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
@@ -659,10 +661,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \'iphone\'
-* \'ipad\'
-* \'desktop\'
-* \'dual\'
+* 'iphone'
+* 'ipad'
+* 'desktop'
+* 'dual'
 
 --------------------------------------------------------------------------------
 
@@ -683,22 +685,22 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > 
 #### Enum
 
-> * \'none\'
-> * \'small\'
-> * \'large\'
+> * 'none'
+> * 'small'
+> * 'large'
 > "
 `;
 
