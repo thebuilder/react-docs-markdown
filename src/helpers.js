@@ -63,8 +63,11 @@ export function blockquote(input) {
 
 
 export function filterProps(name, prop, {excludeKey, excludeType, excludeDescription}) {
+  if (!prop.type) {
+    console.error(`Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`);
+  }
   if (excludeKey && excludeKey.test(name)) return false;
-  if (excludeType && excludeType.test(prop.type.name || prop.type)) return false;
+  if (excludeType && prop.type && excludeType.test(prop.type.name || prop.type)) return false;
   if (excludeDescription && excludeDescription.test(prop.description)) return false;
 
   return true;
