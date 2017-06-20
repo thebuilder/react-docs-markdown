@@ -10,7 +10,7 @@ On the other hand, sometimes the best way to start a conversation is to send a p
 
 In general, the contribution workflow looks like this:
 
-- Open a new issue in the [issue tracker](https://github.com/thebuilder/react-docs-markdown/issues)
+- Open a new issue in the [issue tracker](https://github.com/thebuilder/react-docs-markdown/issues).
 - Fork the repo.
 - Create a new feature branch based off the master branch.
 - Make sure all tests pass and there are no linting errors.
