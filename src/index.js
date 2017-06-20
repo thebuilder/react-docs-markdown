@@ -22,7 +22,13 @@ function addProps(props, options) {
     ...keys
       .map((key) => {
         const prop = filteredProps[key];
-        return [getKey(key, prop.type), getTypeName(prop.type), getDefaultValue(prop), prop.required, prop.description];
+        const row = [getKey(key, prop.type), getTypeName(prop.type), getDefaultValue(prop), prop.required, prop.description];
+        return row.map((rowValue) => {
+          if (typeof rowValue === 'string') {
+            return rowValue.split('\n').join('<br>');
+          }
+          return rowValue;
+        });
       }
     ),
   ];
