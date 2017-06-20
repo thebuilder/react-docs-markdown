@@ -4,6 +4,8 @@ import path from 'path';
 import docsToMarkdown from '../src/index';
 
 const inputJson = require('./input/CaseList.json');
+const imageJson = require('./input/Image.json');
+const textAreaJson = require('./input/TextArea.json');
 
 describe('Docs to markdown', () => {
   it('should convert caselist', () => {
@@ -15,6 +17,18 @@ describe('Docs to markdown', () => {
     expect(result.includes('@custom-exclude')).toEqual(true);
     expect(result.includes('@internal')).toEqual(false); // The @internal description should be excluded.
     save('CaseList', result);
+  });
+
+  it('should convert Image', () => {
+    const result = docsToMarkdown(imageJson, 'Image');
+    expect(result).toMatchSnapshot();
+    save('Image', result);
+  });
+
+  it('should convert TextArea', () => {
+    const result = docsToMarkdown(textAreaJson, 'TextArea');
+    expect(result).toMatchSnapshot();
+    save('TextArea', result);
   });
 
   it('should handle no props', () => {
