@@ -1,5 +1,5 @@
 import table from 'markdown-table';
-import { getDefaultValue, getKey, getTypeName, filterProps} from './helpers';
+import { getDefaultValue, getKey, getTypeName, filterProps } from './helpers';
 import { describeSubTypes } from './types';
 
 const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
@@ -12,25 +12,34 @@ const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
  */
 function addProps(props, options) {
   if (!props) return '## No props';
-  const keys = Object.keys(props).filter(key => filterProps(key, props[key], options));
-  const filteredProps = keys.reduce((last, key) => ({...last, [key]: props[key]}), {});
+  const keys = Object.keys(props).filter(key =>
+    filterProps(key, props[key], options),
+  );
+  const filteredProps = keys.reduce(
+    (last, key) => ({ ...last, [key]: props[key] }),
+    {},
+  );
 
   let output = '\n## Props\n';
 
   const items = [
     TABLE_HEADERS,
-    ...keys
-      .map((key) => {
-        const prop = filteredProps[key];
-        const row = [getKey(key, prop.type), getTypeName(prop.type), getDefaultValue(prop), prop.required, prop.description];
-        return row.map((rowValue) => {
-          if (typeof rowValue === 'string') {
-            return rowValue.split('\n').join('<br>');
-          }
-          return rowValue;
-        });
-      }
-    ),
+    ...keys.map((key) => {
+      const prop = filteredProps[key];
+      const row = [
+        getKey(key, prop.type),
+        getTypeName(prop.type),
+        getDefaultValue(prop),
+        prop.required,
+        prop.description,
+      ];
+      return row.map((rowValue) => {
+        if (typeof rowValue === 'string') {
+          return rowValue.split('\n').join('<br>');
+        }
+        return rowValue;
+      });
+    }),
   ];
 
   output += `${table(items)}\n`;
@@ -49,7 +58,9 @@ function normalizeOptions(options) {
   return {
     excludeKey: toRegExp(options.excludeKeys || options.excludeKey),
     excludeType: toRegExp(options.excludeTypes || options.excludeType),
-    excludeDescription: toRegExp(options.excludeDescription || options.excludeDescription || '@internal'),
+    excludeDescription: toRegExp(
+      options.excludeDescription || options.excludeDescription || '@internal',
+    ),
   };
 }
 
@@ -79,6 +90,5 @@ function docsToMarkdown(api, name = '', options = {}) {
 
   return output;
 }
-
 
 module.exports = docsToMarkdown;
