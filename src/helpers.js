@@ -64,6 +64,7 @@ export function blockquote(input) {
 
 export function filterProps(name, prop, {excludeKey, excludeType, excludeDescription}) {
   if (!prop.type) {
+    // eslint-disable-next-line no-console
     console.error(`Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`);
   }
   if (excludeKey && excludeKey.test(name)) return false;

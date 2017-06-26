@@ -1,0 +1,310 @@
+{
+  "description": "Image handles fetching the correct Imgix image, and rendering it onto the page.\nBy default it will load an image that fills the width of it's container, while keeping the original image aspect ratio",
+  "displayName": "Image",
+  "methods": [
+    {
+      "name": "animationClassName",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "ready",
+          "type": null
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "generateAspectRatio",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "width",
+          "type": null
+        },
+        {
+          "name": "height",
+          "type": null
+        },
+        {
+          "name": "{ mobileWidthScale, maxAspectRatio }",
+          "type": null
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "generateImgixProps",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "props",
+          "type": null
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "generateSource",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "src",
+          "type": null
+        },
+        {
+          "name": "width",
+          "type": null
+        },
+        {
+          "name": "height",
+          "type": null
+        },
+        {
+          "name": "imgixProps",
+          "type": null
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "generateBlurredSource",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "src",
+          "type": null
+        },
+        {
+          "name": "width",
+          "type": null
+        },
+        {
+          "name": "height",
+          "type": null
+        },
+        {
+          "name": "imgixProps",
+          "type": null
+        }
+      ],
+      "returns": null
+    }
+  ],
+  "props": {
+    "children": {
+      "type": {
+        "name": "node"
+      },
+      "required": false,
+      "description": ""
+    },
+    "src": {
+      "type": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Image src URL"
+    },
+    "height": {
+      "type": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Original image height"
+    },
+    "width": {
+      "type": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Original image width"
+    },
+    "alt": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Image alt text"
+    },
+    "contain": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Contain the image inside the area, instead of cropping"
+    },
+    "alignX": {
+      "type": {
+        "name": "enum",
+        "value": [
+          {
+            "value": "'left'",
+            "computed": false
+          },
+          {
+            "value": "'right'",
+            "computed": false
+          },
+          {
+            "value": "'center'",
+            "computed": false
+          }
+        ]
+      },
+      "required": false,
+      "description": "Align the image on X axis, default to center in the browser"
+    },
+    "alignY": {
+      "type": {
+        "name": "enum",
+        "value": [
+          {
+            "value": "'top'",
+            "computed": false
+          },
+          {
+            "value": "'bottom'",
+            "computed": false
+          },
+          {
+            "value": "'center'",
+            "computed": false
+          }
+        ]
+      },
+      "required": false,
+      "description": "Align the image on Y axis, default to center in the browser"
+    },
+    "crop": {
+      "type": {
+        "name": "enum",
+        "value": [
+          {
+            "value": "'faces'",
+            "computed": false
+          },
+          {
+            "value": "'entropy'",
+            "computed": false
+          },
+          {
+            "value": "'edges'",
+            "computed": false
+          },
+          {
+            "value": "'top'",
+            "computed": false
+          },
+          {
+            "value": "'bottom'",
+            "computed": false
+          },
+          {
+            "value": "'left'",
+            "computed": false
+          },
+          {
+            "value": "'right'",
+            "computed": false
+          },
+          {
+            "value": "\"\"",
+            "computed": false
+          },
+          {
+            "value": "null",
+            "computed": false
+          }
+        ]
+      },
+      "required": false,
+      "description": "The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop",
+      "defaultValue": {
+        "value": "'faces'",
+        "computed": false
+      }
+    },
+    "padded": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Add padding around the image - use with \"contain\" to create a padded area around the image, so it doesn't extend to the edge."
+    },
+    "fill": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Fill the container element. On mobile it will revert to aspect ratio"
+    },
+    "mobileFill": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Also apply the fill on mobile devices."
+    },
+    "mobileWidthScale": {
+      "type": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "On mobile, scale the width of the aspect ratio with this - Use to crop the width"
+    },
+    "maxAspectRatio": {
+      "type": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall.",
+      "defaultValue": {
+        "value": "2",
+        "computed": false
+      }
+    },
+    "imgixParams": {
+      "type": {
+        "name": "object"
+      },
+      "required": false,
+      "description": "Any custom Imgix params"
+    },
+    "imageProps": {
+      "type": {
+        "name": "object"
+      },
+      "required": false,
+      "description": "Extra tags to pass as img HTML attributes"
+    },
+    "fadeIn": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Fade in the image when it's loaded. Creates a nice effect with the blurred image"
+    },
+    "disableBlur": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Disable the blurred placeholder shown until size is ready. Will instead show a spinner"
+    }
+  }
+}

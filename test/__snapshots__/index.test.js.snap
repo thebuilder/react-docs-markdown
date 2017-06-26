@@ -609,6 +609,95 @@ Margin can be either a string, or an object with top/bottom margin
 > "
 `;
 
+exports[`Docs to markdown should convert Image 1`] = `
+"# Image
+
+Image handles fetching the correct Imgix image, and rendering it onto the page.
+By default it will load an image that fills the width of it's container, while keeping the original image aspect ratio
+
+
+## Props
+| Name                               | Type   | Default | Required | Description                                                                                                                   |
+| ---------------------------------- | ------ | ------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| children                           | Node   |         | false    |                                                                                                                               |
+| src                                | String |         | true     | Image src URL                                                                                                                 |
+| height                             | Number |         | true     | Original image height                                                                                                         |
+| width                              | Number |         | true     | Original image width                                                                                                          |
+| alt                                | String |         | false    | Image alt text                                                                                                                |
+| contain                            | Bool   | false   | false    | Contain the image inside the area, instead of cropping                                                                        |
+| [alignX](#markdown-header-align-x) | Enum   |         | false    | Align the image on X axis, default to center in the browser                                                                   |
+| [alignY](#markdown-header-align-y) | Enum   |         | false    | Align the image on Y axis, default to center in the browser                                                                   |
+| [crop](#markdown-header-crop)      | Enum   | 'faces' | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                            |
+| padded                             | Bool   | false   | false    | Add padding around the image - use with \\"contain\\" to create a padded area around the image, so it doesn't extend to the edge. |
+| fill                               | Bool   | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                          |
+| mobileFill                         | Bool   | false   | false    | Also apply the fill on mobile devices.                                                                                        |
+| mobileWidthScale                   | Number |         | false    | On mobile, scale the width of the aspect ratio with this - Use to crop the width                                              |
+| maxAspectRatio                     | Number | 2       | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall.  |
+| imgixParams                        | Object |         | false    | Any custom Imgix params                                                                                                       |
+| imageProps                         | Object |         | false    | Extra tags to pass as img HTML attributes                                                                                     |
+| fadeIn                             | Bool   | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                              |
+| disableBlur                        | Bool   | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                        |
+
+## Complex Props
+
+### alignX
+Type: _Enum_
+
+Align the image on X axis, default to center in the browser
+
+**alignX** should be one of the following values:
+
+* 'left'
+* 'right'
+* 'center'
+
+--------------------------------------------------------------------------------
+
+### alignY
+Type: _Enum_
+
+Align the image on Y axis, default to center in the browser
+
+**alignY** should be one of the following values:
+
+* 'top'
+* 'bottom'
+* 'center'
+
+--------------------------------------------------------------------------------
+
+### crop
+Type: _Enum_
+
+The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop
+
+**crop** should be one of the following values:
+
+* 'faces'
+* 'entropy'
+* 'edges'
+* 'top'
+* 'bottom'
+* 'left'
+* 'right'
+* \\"\\"
+* null
+"
+`;
+
+exports[`Docs to markdown should convert TextArea 1`] = `
+"# TextArea
+
+## Props
+| Name     | Type   | Default                               | Required | Description |
+| -------- | ------ | ------------------------------------- | -------- | ----------- |
+| debounce | Object | {<br>  blur: 0,<br>  change: 500<br>} | false    |             |
+| updateOn | String | 'blur change'                         | false    |             |
+| value    | String |                                       | false    |             |
+| onBlur   | Func   | () => {}                              | false    |             |
+"
+`;
+
 exports[`Docs to markdown should convert caselist 1`] = `
 "# CaseList
 

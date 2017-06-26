@@ -1,0 +1,50 @@
+{
+  "description": "",
+  "methods": [],
+  "props": {
+    "debounce": {
+      "type": {
+        "name": "object"
+      },
+      "required": false,
+      "description": "",
+      "defaultValue": {
+        "value": "{\n  blur: 0,\n  change: 500\n}",
+        "computed": false
+      }
+    },
+    "updateOn": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "",
+      "defaultValue": {
+        "value": "'blur change'",
+        "computed": false
+      }
+    },
+    "value": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": ""
+    },
+    "onBlur": {
+      "type": {
+        "name": "func"
+      },
+      "required": false,
+      "description": "",
+      "defaultValue": {
+        "value": "() => {}",
+        "computed": false
+      }
+    }
+  },
+  "composes": [
+    "./component-common",
+    "./controls/textarea"
+  ]
+}
