@@ -91,4 +91,4 @@ function docsToMarkdown(api, name = '', options = {}) {
   return output
 }
 
-module.exports = docsToMarkdown
+export default docsToMarkdown

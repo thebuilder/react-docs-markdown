@@ -8,6 +8,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src test",
+    "lint-staged": "lint-staged",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
   },
@@ -32,6 +33,21 @@
     "url": "https://github.com/thebuilder/react-docs-markdown/issues"
   },
   "homepage": "https://github.com/thebuilder/react-docs-markdown#readme",
+  "eslintConfig": {
+    "extends": [
+      "insilico",
+      "prettier"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --no-semi --single-quote --trailing-comma all",
+      "eslint",
+      "jest --findRelatedTests",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged",
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
@@ -42,9 +58,12 @@
     "babel-register": "6.24.1",
     "cross-env": "5.0.1",
     "eslint": "4.2.0",
-    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-config-insilico": "4.1.0",
+    "eslint-config-prettier": "2.3.0",
     "eslint-plugin-import": "2.7.0",
     "jest": "20.0.4",
+    "lint-staged": "4.0.1",
+    "pre-commit": "1.2.2",
     "rimraf": "2.6.1"
   },
   "dependencies": {
