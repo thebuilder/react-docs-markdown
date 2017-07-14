@@ -52,10 +52,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -76,23 +76,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown Exclude description should exclude type with regex 1`] = `
@@ -147,10 +151,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -171,23 +175,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown Exclude description should exclude type with string 1`] = `
@@ -242,10 +250,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -266,23 +274,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown Exclude key should exclude key with array 1`] = `
@@ -336,10 +348,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 "
 `;
 
@@ -394,10 +406,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 "
 `;
 
@@ -452,10 +464,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 "
 `;
 
@@ -490,23 +502,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown Exclude type should exclude type with regex 1`] = `
@@ -540,23 +556,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown Exclude type should exclude type with string 1`] = `
@@ -590,23 +610,116 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
+`;
+
+exports[`Docs to markdown should convert Cards 1`] = `
+"# Cards
+
+## Props
+| Name                                          | Type    | Default | Required | Description                                                                            |
+| --------------------------------------------- | ------- | ------- | -------- | -------------------------------------------------------------------------------------- |
+| [itemsPerRow](#markdown-header-items-per-row) | Enum    | 3       | true     | The maximum number of items per row. In a narrow/article ribbon, set this to 2.        |
+| [theme](#markdown-header-theme)               | Enum    |         | false    |                                                                                        |
+| collapse                                      | Bool    | false   | false    | If \\"true\\" only the first row of cards will be displayed, until user clicks \\"show more\\" |
+| showMoreLabel                                 | String  |         | false    |                                                                                        |
+| showLessLabel                                 | String  |         | false    |                                                                                        |
+| [items](#markdown-header-items)               | Arrayof |         | true     |                                                                                        |
+
+## Complex Props
+
+### itemsPerRow
+Type: _Enum_
+
+The maximum number of items per row. In a narrow/article ribbon, set this to 2.
+
+**itemsPerRow** should be one of the following values:
+
+* \`1\` _(number)_
+* \`2\` _(number)_
+* \`3\` _(number)_
+
+--------------------------------------------------------------------------------
+
+### theme
+Type: _Enum_
+
+**theme** should be one of the following values:
+
+* \`\\"blue\\"\` _(string)_
+
+--------------------------------------------------------------------------------
+
+### items
+Type: _Arrayof_
+
+**items** is an array of the following type:
+
+| Name                              | Type   | Required |
+| --------------------------------- | ------ | -------- |
+| tag                               | String | false    |
+| title                             | String | false    |
+| body                              | String | false    |
+| [type](#markdown-header-type)     | Enum   | false    |
+| [fields](#markdown-header-fields) | OneOf  | false    |
+| [cta](#markdown-header-cta)       | Object | false    |
+
+#### type
+Type: _Enum_
+
+* \`null\` _(null)_
+* \`\\"default\\"\` _(string)_
+* \`\\"event\\"\` _(string)_
+
+#### fields
+Type: _OneOf_
+
+##### Object
+
+> | Name                              | Type    | Required |
+> | --------------------------------- | ------- | -------- |
+> | date                              | String  | true     |
+> | location                          | String  | true     |
+> | [prices](#markdown-header-prices) | Arrayof | false    |
+> 
+> ###### prices
+> Type: _Arrayof_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | label | String | true     |
+> | value | String | true     |
+> 
+
+
+#### cta
+Type: _Object_
+
+| Name   | Type   | Required |
+| ------ | ------ | -------- |
+| href   | String | false    |
+| target | String | false    |
+"
 `;
 
 exports[`Docs to markdown should convert Image 1`] = `
@@ -647,9 +760,9 @@ Align the image on X axis, default to center in the browser
 
 **alignX** should be one of the following values:
 
-* 'left'
-* 'right'
-* 'center'
+* \`\\"left\\"\` _(string)_
+* \`\\"right\\"\` _(string)_
+* \`\\"center\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -660,9 +773,9 @@ Align the image on Y axis, default to center in the browser
 
 **alignY** should be one of the following values:
 
-* 'top'
-* 'bottom'
-* 'center'
+* \`\\"top\\"\` _(string)_
+* \`\\"bottom\\"\` _(string)_
+* \`\\"center\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -673,15 +786,15 @@ The method used when cropping the image: https://docs.imgix.com/apis/url/size/cr
 
 **crop** should be one of the following values:
 
-* 'faces'
-* 'entropy'
-* 'edges'
-* 'top'
-* 'bottom'
-* 'left'
-* 'right'
-* \\"\\"
-* null
+* \`\\"faces\\"\` _(string)_
+* \`\\"entropy\\"\` _(string)_
+* \`\\"edges\\"\` _(string)_
+* \`\\"top\\"\` _(string)_
+* \`\\"bottom\\"\` _(string)_
+* \`\\"left\\"\` _(string)_
+* \`\\"right\\"\` _(string)_
+* \`\\"\\"\` _(object)_
+* \`null\` _(null)_
 "
 `;
 
@@ -750,10 +863,10 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* 'iphone'
-* 'ipad'
-* 'desktop'
-* 'dual'
+* \`\\"iphone\\"\` _(string)_
+* \`\\"ipad\\"\` _(string)_
+* \`\\"desktop\\"\` _(string)_
+* \`\\"dual\\"\` _(string)_
 
 --------------------------------------------------------------------------------
 
@@ -774,23 +887,27 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * 'none'
-> * 'small'
-> * 'large'
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
 > 
+
+
 #### Enum
 
-> * 'none'
-> * 'small'
-> * 'large'
-> "
+> * \`\\"none\\"\` _(string)_
+> * \`\\"small\\"\` _(string)_
+> * \`\\"large\\"\` _(string)_
+> 
+
+"
 `;
 
 exports[`Docs to markdown should handle no props 1`] = `

@@ -1,8 +1,8 @@
-import table from 'markdown-table';
-import { getDefaultValue, getKey, getTypeName, filterProps } from './helpers';
-import { describeSubTypes } from './types';
+import table from 'markdown-table'
+import { getDefaultValue, getKey, getTypeName, filterProps } from './helpers'
+import { describeSubTypes } from './types'
 
-const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
+const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description']
 
 /**
  * Loop through all the top level props
@@ -11,47 +11,47 @@ const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description'];
  * @returns {string}
  */
 function addProps(props, options) {
-  if (!props) return '## No props';
+  if (!props) return '## No props'
   const keys = Object.keys(props).filter(key =>
     filterProps(key, props[key], options),
-  );
+  )
   const filteredProps = keys.reduce(
     (last, key) => ({ ...last, [key]: props[key] }),
     {},
-  );
+  )
 
-  let output = '\n## Props\n';
+  let output = '\n## Props\n'
 
   const items = [
     TABLE_HEADERS,
-    ...keys.map((key) => {
-      const prop = filteredProps[key];
+    ...keys.map(key => {
+      const prop = filteredProps[key]
       const row = [
         getKey(key, prop.type),
         getTypeName(prop.type),
         getDefaultValue(prop),
         prop.required,
         prop.description,
-      ];
-      return row.map((rowValue) => {
+      ]
+      return row.map(rowValue => {
         if (typeof rowValue === 'string') {
-          return rowValue.split('\n').join('<br>');
+          return rowValue.split('\n').join('<br>')
         }
-        return rowValue;
-      });
+        return rowValue
+      })
     }),
-  ];
+  ]
 
-  output += `${table(items)}\n`;
+  output += `${table(items)}\n`
 
   // Add subtypes
-  const subTypes = describeSubTypes(filteredProps);
+  const subTypes = describeSubTypes(filteredProps)
   if (subTypes.length) {
-    output += '\n## Complex Props\n';
-    output += subTypes;
+    output += '\n## Complex Props\n'
+    output += subTypes
   }
 
-  return output;
+  return output
 }
 
 function normalizeOptions(options) {
@@ -61,14 +61,14 @@ function normalizeOptions(options) {
     excludeDescription: toRegExp(
       options.excludeDescription || options.excludeDescription || '@internal',
     ),
-  };
+  }
 }
 
 function toRegExp(input) {
-  if (!input) return null;
-  if (Array.isArray(input)) return new RegExp(`(${input.join('|')})`, 'i');
+  if (!input) return null
+  if (Array.isArray(input)) return new RegExp(`(${input.join('|')})`, 'i')
 
-  return new RegExp(input, 'i');
+  return new RegExp(input, 'i')
 }
 
 /**
@@ -83,12 +83,12 @@ function toRegExp(input) {
  * @returns {string} Markdown document
  */
 function docsToMarkdown(api, name = '', options = {}) {
-  let output = '';
-  if (name) output += `# ${name}\n`;
-  if (api.description) output += `\n${api.description}\n\n`;
-  output += addProps(api.props, normalizeOptions(options));
+  let output = ''
+  if (name) output += `# ${name}\n`
+  if (api.description) output += `\n${api.description}\n\n`
+  output += addProps(api.props, normalizeOptions(options))
 
-  return output;
+  return output
 }
 
-module.exports = docsToMarkdown;
+module.exports = docsToMarkdown

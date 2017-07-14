@@ -1,32 +1,32 @@
-import kebab from 'lodash/fp/kebabCase';
-import capitalize from 'lodash/fp/capitalize';
+import kebab from 'lodash/fp/kebabCase'
+import capitalize from 'lodash/fp/capitalize'
 
 export function getDefaultValue(prop) {
-  const value = prop.defaultValue;
-  const type = prop.type.name;
+  const value = prop.defaultValue
+  const type = prop.type.name
   if (!value) {
     switch (type) {
       case 'bool':
-        return false; // Default for boolean is false
+        return false // Default for boolean is false
       default:
-        return '';
+        return ''
     }
   }
 
   if (typeof value.value !== 'undefined' && value.value) {
-    return value.value;
+    return value.value
   }
-  return value;
+  return value
 }
 
 export function getKey(key, type) {
   if (isComplexType(type.name)) {
     // TODO: Add support for Github markdown?
     // Add Bitbucket header link
-    return `[${key}](#markdown-header-${kebab(key)})`;
+    return `[${key}](#markdown-header-${kebab(key)})`
   }
 
-  return key;
+  return key
 }
 
 /**
@@ -37,11 +37,11 @@ export function getKey(key, type) {
 export function getTypeName(type) {
   switch (type.name) {
     default:
-      return capitalize(type.name);
+      return capitalize(type.name)
     case 'union':
-      return 'OneOf';
+      return 'OneOf'
     case 'shape':
-      return 'Object';
+      return 'Object'
   }
 }
 
@@ -51,25 +51,32 @@ export function isComplexType(name) {
     case 'shape':
     case 'arrayOf':
     case 'enum':
-      return true;
+      return true
     default:
-      return false;
+      return false
   }
 }
 
 export function blockquote(input) {
-  return input.replace(/\n/g, '\n> ');
+  return input.replace(/\n/g, '\n> ')
 }
 
-
-export function filterProps(name, prop, {excludeKey, excludeType, excludeDescription}) {
+export function filterProps(
+  name,
+  prop,
+  { excludeKey, excludeType, excludeDescription },
+) {
   if (!prop.type) {
     // eslint-disable-next-line no-console
-    console.error(`Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`);
+    console.error(
+      `Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`,
+    )
   }
-  if (excludeKey && excludeKey.test(name)) return false;
-  if (excludeType && prop.type && excludeType.test(prop.type.name || prop.type)) return false;
-  if (excludeDescription && excludeDescription.test(prop.description)) return false;
+  if (excludeKey && excludeKey.test(name)) return false
+  if (excludeType && prop.type && excludeType.test(prop.type.name || prop.type))
+    return false
+  if (excludeDescription && excludeDescription.test(prop.description))
+    return false
 
-  return true;
+  return true
 }

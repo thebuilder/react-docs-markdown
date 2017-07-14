@@ -1,0 +1,98 @@
+{
+  "description": "",
+  "displayName": "Cards",
+  "props": {
+    "itemsPerRow": {
+      "type": {
+        "name": "enum",
+        "value": [
+          { "value": "1", "computed": false },
+          { "value": "2", "computed": false },
+          { "value": "3", "computed": false }
+        ]
+      },
+      "required": true,
+      "description": "The maximum number of items per row. In a narrow/article ribbon, set this to 2.",
+      "defaultValue": { "value": "3", "computed": false }
+    },
+    "theme": {
+      "type": {
+        "name": "enum",
+        "value": [{ "value": "'blue'", "computed": false }]
+      },
+      "required": false,
+      "description": ""
+    },
+    "collapse": {
+      "type": { "name": "bool" },
+      "required": false,
+      "description": "If \"true\" only the first row of cards will be displayed, until user clicks \"show more\""
+    },
+    "showMoreLabel": {
+      "type": { "name": "string" },
+      "required": false,
+      "description": ""
+    },
+    "showLessLabel": {
+      "type": { "name": "string" },
+      "required": false,
+      "description": ""
+    },
+    "items": {
+      "type": {
+        "name": "arrayOf",
+        "value": {
+          "name": "shape",
+          "value": {
+            "tag": { "name": "string", "required": false },
+            "title": { "name": "string", "required": false },
+            "body": { "name": "string", "required": false },
+            "type": {
+              "name": "enum",
+              "value": [
+                { "value": "null", "computed": false },
+                { "value": "'default'", "computed": false },
+                { "value": "'event'", "computed": false }
+              ],
+              "required": false
+            },
+            "fields": {
+              "name": "union",
+              "value": [
+                {
+                  "name": "shape",
+                  "value": {
+                    "date": { "name": "string", "required": true },
+                    "location": { "name": "string", "required": true },
+                    "prices": {
+                      "name": "arrayOf",
+                      "value": {
+                        "name": "shape",
+                        "value": {
+                          "label": { "name": "string", "required": true },
+                          "value": { "name": "string", "required": true }
+                        }
+                      },
+                      "required": false
+                    }
+                  }
+                }
+              ],
+              "required": false
+            },
+            "cta": {
+              "name": "shape",
+              "value": {
+                "href": { "name": "string", "required": false },
+                "target": { "name": "string", "required": false }
+              },
+              "required": false
+            }
+          }
+        }
+      },
+      "required": true,
+      "description": ""
+    }
+  }
+}

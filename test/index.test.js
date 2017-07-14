@@ -4,6 +4,7 @@ import path from 'path';
 import docsToMarkdown from '../src/index';
 
 const inputJson = require('./input/CaseList.json');
+const cardsJson = require('./input/Cards.json');
 const imageJson = require('./input/Image.json');
 const textAreaJson = require('./input/TextArea.json');
 
@@ -23,6 +24,12 @@ describe('Docs to markdown', () => {
     const result = docsToMarkdown(imageJson, 'Image');
     expect(result).toMatchSnapshot();
     save('Image', result);
+  });
+
+  it('should convert Cards', () => {
+    const result = docsToMarkdown(cardsJson, 'Cards');
+    expect(result).toMatchSnapshot();
+    save('Cards', result);
   });
 
   it('should convert TextArea', () => {
