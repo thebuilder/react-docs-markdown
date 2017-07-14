@@ -75,20 +75,25 @@ export function arrayOf(type, level) {
 }
 
 export function enumType(values) {
-  return values.reduce((output, value) => {
-    let val = value.value
+  const items = [
+    ['Value', 'Type'],
+    ...values.map(item => {
+      let value = item.value
 
-    // Do some basic type detection, to better label the Enum. React-doc-gen doesn't provide the type of an enum, so guess
-    let type = 'object'
-    if (val.charAt(0) === "'") {
-     // Replace the the ' with ", since it better communicates that a value is a string
-      val = val.replace(/'/g, '"')
-      type = 'string'
-    } else if (!isNaN(parseInt(val, 10))) type = 'number'
-    else if (val === 'null' || val === 'undefined') type = val
+      // Do some basic type detection, to better label the Enum. React-doc-gen doesn't provide the type of an enum, so guess
+      let type = 'Object'
+      if (value.charAt(0) === "'") {
+        // Remove the ' in strings
+        value = value.replace(/'/g, '')
+        type = 'String'
+      } else if (!isNaN(parseInt(value, 10))) type = 'Number'
+      else if (value === 'true' || value === 'false') type = 'Boolean'
+      else if (value === 'null' || value === 'undefined') type = value
+      return [value, type]
+    }),
+  ]
 
-    return `${output}* \`${val}\` _(${type})_\n`
-  }, '\n')
+  return `\n${table(items)}\n`
 }
 
 export function shape(types, level) {

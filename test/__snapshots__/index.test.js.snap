@@ -52,10 +52,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 
 --------------------------------------------------------------------------------
 
@@ -76,24 +78,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -151,10 +159,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 
 --------------------------------------------------------------------------------
 
@@ -175,24 +185,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -250,10 +266,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 
 --------------------------------------------------------------------------------
 
@@ -274,24 +292,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -348,10 +372,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 "
 `;
 
@@ -406,10 +432,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 "
 `;
 
@@ -464,10 +492,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 "
 `;
 
@@ -502,24 +532,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -556,24 +592,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -610,24 +652,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
@@ -655,9 +703,11 @@ The maximum number of items per row. In a narrow/article ribbon, set this to 2.
 
 **itemsPerRow** should be one of the following values:
 
-* \`1\` _(number)_
-* \`2\` _(number)_
-* \`3\` _(number)_
+| Value | Type   |
+| ----- | ------ |
+| 1     | Number |
+| 2     | Number |
+| 3     | Number |
 
 --------------------------------------------------------------------------------
 
@@ -666,7 +716,9 @@ Type: _Enum_
 
 **theme** should be one of the following values:
 
-* \`\\"blue\\"\` _(string)_
+| Value | Type   |
+| ----- | ------ |
+| blue  | String |
 
 --------------------------------------------------------------------------------
 
@@ -687,9 +739,11 @@ Type: _Arrayof_
 #### type
 Type: _Enum_
 
-* \`null\` _(null)_
-* \`\\"default\\"\` _(string)_
-* \`\\"event\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| null    | null   |
+| default | String |
+| event   | String |
 
 #### fields
 Type: _OneOf_
@@ -760,9 +814,11 @@ Align the image on X axis, default to center in the browser
 
 **alignX** should be one of the following values:
 
-* \`\\"left\\"\` _(string)_
-* \`\\"right\\"\` _(string)_
-* \`\\"center\\"\` _(string)_
+| Value  | Type   |
+| ------ | ------ |
+| left   | String |
+| right  | String |
+| center | String |
 
 --------------------------------------------------------------------------------
 
@@ -773,9 +829,11 @@ Align the image on Y axis, default to center in the browser
 
 **alignY** should be one of the following values:
 
-* \`\\"top\\"\` _(string)_
-* \`\\"bottom\\"\` _(string)_
-* \`\\"center\\"\` _(string)_
+| Value  | Type   |
+| ------ | ------ |
+| top    | String |
+| bottom | String |
+| center | String |
 
 --------------------------------------------------------------------------------
 
@@ -786,15 +844,17 @@ The method used when cropping the image: https://docs.imgix.com/apis/url/size/cr
 
 **crop** should be one of the following values:
 
-* \`\\"faces\\"\` _(string)_
-* \`\\"entropy\\"\` _(string)_
-* \`\\"edges\\"\` _(string)_
-* \`\\"top\\"\` _(string)_
-* \`\\"bottom\\"\` _(string)_
-* \`\\"left\\"\` _(string)_
-* \`\\"right\\"\` _(string)_
-* \`\\"\\"\` _(object)_
-* \`null\` _(null)_
+| Value   | Type   |
+| ------- | ------ |
+| faces   | String |
+| entropy | String |
+| edges   | String |
+| top     | String |
+| bottom  | String |
+| left    | String |
+| right   | String |
+| \\"\\"      | Object |
+| null    | null   |
 "
 `;
 
@@ -863,10 +923,12 @@ Type: _Object_
 ##### type
 Type: _Enum_
 
-* \`\\"iphone\\"\` _(string)_
-* \`\\"ipad\\"\` _(string)_
-* \`\\"desktop\\"\` _(string)_
-* \`\\"dual\\"\` _(string)_
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
 
 --------------------------------------------------------------------------------
 
@@ -887,24 +949,30 @@ Margin can be either a string, or an object with top/bottom margin
 > ##### top
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 > ##### bottom
 > Type: _Enum_
 > 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 
 #### Enum
 
-> * \`\\"none\\"\` _(string)_
-> * \`\\"small\\"\` _(string)_
-> * \`\\"large\\"\` _(string)_
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
 > 
 
 "
