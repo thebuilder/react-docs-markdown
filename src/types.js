@@ -11,6 +11,8 @@ export function describeType(type, level = 0) {
       return union(type.value, level)
     case 'arrayOf':
       return arrayOf(type.value, level)
+    case 'custom':
+      return type.raw || type.name
     default:
       return type.value || type.name
   }

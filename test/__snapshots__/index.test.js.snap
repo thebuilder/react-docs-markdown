@@ -776,6 +776,303 @@ Type: _Object_
 "
 `;
 
+exports[`Docs to markdown should convert Hero 1`] = `
+"# Hero
+
+## Props
+| Name                                     | Type   | Default | Required | Description                                                                                                   |
+| ---------------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| tag                                      | String |         | false    | The \\"tag\\" the small label rendered in the lower corner                                                        |
+| headline                                 | String |         | true     | The overall page title                                                                                        |
+| [content](#markdown-header-content)      | OneOf  |         | true     | Content can be a paragraph, or an array of paragraphs                                                         |
+| cta                                      | CTA    |         | false    | Add a button with a CTA below the content                                                                     |
+| [goBack](#markdown-header-go-back)       | Object |         | false    | The back link to render, to return the user to an overview page                                               |
+| [share](#markdown-header-share)          | Object |         | false    | Share widget props, if the Hero should render a Share widget                                                  |
+| [margin](#markdown-header-margin)        | Enum   |         | false    | Remove the margin between hero and section by setting it to none. Used if the following ribbon has no pattern |
+| [pattern](#markdown-header-pattern)      | Enum   |         | false    | Use a Pattern instead of the theme                                                                            |
+| [mediaType](#markdown-header-media-type) | Enum   |         | false    | Type of the media                                                                                             |
+| [media](#markdown-header-media)          | OneOf  |         | false    | The Media object should match the related mediaType                                                           |
+| [cardType](#markdown-header-card-type)   | Enum   |         | false    | Type of the card                                                                                              |
+| [card](#markdown-header-card)            | OneOf  |         | false    | The Media object should match the related cardType                                                            |
+| title                                    | String |         | false    |                                                                                                               |
+
+## Complex Props
+
+### content
+Type: _OneOf_
+
+Content can be a paragraph, or an array of paragraphs
+
+**content** should be one of the following types:
+
+#### String
+string
+
+
+#### Arrayof
+string
+
+
+--------------------------------------------------------------------------------
+
+### goBack
+Type: _Object_
+
+The back link to render, to return the user to an overview page
+
+**goBack** is an object with:
+
+| Name  | Type   | Required |
+| ----- | ------ | -------- |
+| label | String | true     |
+| href  | String | true     |
+
+--------------------------------------------------------------------------------
+
+### share
+Type: _Object_
+
+Share widget props, if the Hero should render a Share widget
+
+**share** is an object with:
+
+| Name                                               | Type    | Required |
+| -------------------------------------------------- | ------- | -------- |
+| saveLabel                                          | String  | false    |
+| savedLabel                                         | String  | false    |
+| shareLabel                                         | String  | false    |
+| saveApi                                            | String  | false    |
+| [socialNetworks](#markdown-header-social-networks) | Arrayof | false    |
+| pageUrl                                            | String  | false    |
+
+#### socialNetworks
+Type: _Arrayof_
+
+Social networks to allow sharing from
+
+| Value    | Type   |
+| -------- | ------ |
+| twitter  | String |
+| facebook | String |
+| linkedin | String |
+
+--------------------------------------------------------------------------------
+
+### margin
+Type: _Enum_
+
+Remove the margin between hero and section by setting it to none. Used if the following ribbon has no pattern
+
+**margin** should be one of the following values:
+
+| Value | Type   |
+| ----- | ------ |
+| none  | String |
+| null  | null   |
+
+--------------------------------------------------------------------------------
+
+### pattern
+Type: _Enum_
+
+Use a Pattern instead of the theme
+
+**pattern** should be one of the following values:
+
+| Value   | Type   |
+| ------- | ------ |
+| stripes | String |
+| dots    | String |
+| waves   | String |
+
+--------------------------------------------------------------------------------
+
+### mediaType
+Type: _Enum_
+
+Type of the media
+
+**mediaType** should be one of the following values:
+
+| Value | Type   |
+| ----- | ------ |
+| image | String |
+| video | String |
+
+--------------------------------------------------------------------------------
+
+### media
+Type: _OneOf_
+
+The Media object should match the related mediaType
+
+**media** should be one of the following types:
+
+#### Object
+
+> | Name   | Type   | Required |
+> | ------ | ------ | -------- |
+> | src    | String | true     |
+> | height | Number | true     |
+> | width  | Number | true     |
+> 
+
+
+#### Object
+
+> | Name | Type   | Required |
+> | ---- | ------ | -------- |
+> | src  | String | true     |
+> 
+
+
+--------------------------------------------------------------------------------
+
+### cardType
+Type: _Enum_
+
+Type of the card
+
+**cardType** should be one of the following values:
+
+| Value    | Type   |
+| -------- | ------ |
+| download | String |
+| event    | String |
+| contact  | String |
+
+--------------------------------------------------------------------------------
+
+### card
+Type: _OneOf_
+
+The Media object should match the related cardType
+
+**card** should be one of the following types:
+
+#### Object
+
+> | Name                            | Type   | Required |
+> | ------------------------------- | ------ | -------- |
+> | name                            | String | true     |
+> | description                     | String | false    |
+> | [image](#markdown-header-image) | Object | false    |
+> | buttonLabel                     | String | true     |
+> | href                            | String | true     |
+> 
+> ##### image
+> Type: _Object_
+> 
+> | Name   | Type   | Required |
+> | ------ | ------ | -------- |
+> | src    | String | true     |
+> | height | Number | true     |
+> | width  | Number | true     |
+> 
+
+
+#### Object
+
+> | Name                              | Type    | Required |
+> | --------------------------------- | ------- | -------- |
+> | tag                               | String  | false    |
+> | title                             | String  | false    |
+> | body                              | String  | false    |
+> | cta                               | CTA     | false    |
+> | date                              | String  | false    |
+> | location                          | String  | false    |
+> | [prices](#markdown-header-prices) | Arrayof | false    |
+> 
+> ##### prices
+> Type: _Arrayof_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | label | String | true     |
+> | value | String | true     |
+> 
+
+
+#### Object
+
+> | Name                                  | Type    | Required |
+> | ------------------------------------- | ------- | -------- |
+> | introduction                          | String  | false    |
+> | highlight                             | String  | false    |
+> | [hotline](#markdown-header-hotline)   | Object  | false    |
+> | [contacts](#markdown-header-contacts) | Arrayof | false    |
+> 
+> ##### hotline
+> Type: _Object_
+> 
+> Render a hotline card
+> 
+> | Name                            | Type   | Required |
+> | ------------------------------- | ------ | -------- |
+> | title                           | String | true     |
+> | text                            | String | false    |
+> | [phone](#markdown-header-phone) | Object | false    |
+> | [email](#markdown-header-email) | Object | false    |
+> | simple                          | Bool   | false    |
+> 
+> ###### phone
+> Type: _Object_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | href  | String | false    |
+> | label | String | false    |
+> 
+> ###### email
+> Type: _Object_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | href  | String | false    |
+> | label | String | false    |
+> 
+> ##### contacts
+> Type: _Arrayof_
+> 
+> Contact persons to render
+> 
+> | Name                            | Type   | Required |
+> | ------------------------------- | ------ | -------- |
+> | name                            | String | true     |
+> | jobTitle                        | String | false    |
+> | department                      | String | false    |
+> | [image](#markdown-header-image) | Object | false    |
+> | [phone](#markdown-header-phone) | Object | false    |
+> | [email](#markdown-header-email) | Object | false    |
+> | cta                             | CTA    | false    |
+> 
+> ###### image
+> Type: _Object_
+> 
+> | Name | Type   | Required |
+> | ---- | ------ | -------- |
+> | src  | String | false    |
+> 
+> ###### phone
+> Type: _Object_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | href  | String | false    |
+> | label | String | false    |
+> 
+> ###### email
+> Type: _Object_
+> 
+> | Name  | Type   | Required |
+> | ----- | ------ | -------- |
+> | href  | String | false    |
+> | label | String | false    |
+> 
+
+"
+`;
+
 exports[`Docs to markdown should convert Image 1`] = `
 "# Image
 

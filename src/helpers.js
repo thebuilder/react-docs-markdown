@@ -36,12 +36,14 @@ export function getKey(key, type) {
  */
 export function getTypeName(type) {
   switch (type.name) {
-    default:
-      return capitalize(type.name)
     case 'union':
       return 'OneOf'
+    case 'custom':
+      return type.raw
     case 'shape':
       return 'Object'
+    default:
+      return capitalize(type.name)
   }
 }
 

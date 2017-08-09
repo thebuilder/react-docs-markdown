@@ -1,0 +1,277 @@
+{
+  "description": "",
+  "displayName": "Hero",
+  "props": {
+    "tag": {
+      "type": { "name": "string" },
+      "required": false,
+      "description": "The \"tag\" the small label rendered in the lower corner"
+    },
+    "headline": {
+      "type": { "name": "string" },
+      "required": true,
+      "description": "The overall page title"
+    },
+    "content": {
+      "type": {
+        "name": "union",
+        "value": [
+          { "name": "string" },
+          { "name": "arrayOf", "value": { "name": "string" } }
+        ]
+      },
+      "required": true,
+      "description": "Content can be a paragraph, or an array of paragraphs"
+    },
+    "cta": {
+      "type": { "name": "custom", "raw": "CTA" },
+      "required": false,
+      "description": "Add a button with a CTA below the content"
+    },
+    "goBack": {
+      "type": {
+        "name": "shape",
+        "value": {
+          "label": { "name": "string", "required": true },
+          "href": { "name": "string", "required": true }
+        }
+      },
+      "required": false,
+      "description": "The back link to render, to return the user to an overview page"
+    },
+    "share": {
+      "type": {
+        "name": "shape",
+        "value": {
+          "saveLabel": { "name": "string", "required": false },
+          "savedLabel": { "name": "string", "required": false },
+          "shareLabel": { "name": "string", "required": false },
+          "saveApi": { "name": "string", "required": false },
+          "socialNetworks": {
+            "name": "arrayOf",
+            "value": {
+              "name": "enum",
+              "value": [
+                { "value": "'twitter'", "computed": false },
+                { "value": "'facebook'", "computed": false },
+                { "value": "'linkedin'", "computed": false }
+              ]
+            },
+            "description": "Social networks to allow sharing from",
+            "required": false
+          },
+          "pageUrl": {
+            "name": "string",
+            "description": "Optional - The current URL will be used if not supplied",
+            "required": false
+          }
+        }
+      },
+      "required": false,
+      "description": "Share widget props, if the Hero should render a Share widget"
+    },
+    "margin": {
+      "type": {
+        "name": "enum",
+        "value": [
+          { "value": "'none'", "computed": false },
+          { "value": "null", "computed": false }
+        ]
+      },
+      "required": false,
+      "description": "Remove the margin between hero and section by setting it to none. Used if the following ribbon has no pattern"
+    },
+    "pattern": {
+      "type": {
+        "name": "enum",
+        "value": [
+          { "value": "'stripes'", "computed": false },
+          { "value": "'dots'", "computed": false },
+          { "value": "'waves'", "computed": false }
+        ]
+      },
+      "required": false,
+      "description": "Use a Pattern instead of the theme"
+    },
+    "mediaType": {
+      "type": {
+        "name": "enum",
+        "value": [
+          { "value": "'image'", "computed": false },
+          { "value": "'video'", "computed": false }
+        ]
+      },
+      "required": false,
+      "description": "Type of the media"
+    },
+    "media": {
+      "type": {
+        "name": "union",
+        "value": [
+          {
+            "name": "shape",
+            "value": {
+              "src": { "name": "string", "required": true },
+              "height": { "name": "number", "required": true },
+              "width": { "name": "number", "required": true }
+            }
+          },
+          {
+            "name": "shape",
+            "value": { "src": { "name": "string", "required": true } }
+          }
+        ]
+      },
+      "required": false,
+      "description": "The Media object should match the related mediaType"
+    },
+    "cardType": {
+      "type": {
+        "name": "enum",
+        "value": [
+          { "value": "'download'", "computed": false },
+          { "value": "'event'", "computed": false },
+          { "value": "'contact'", "computed": false }
+        ]
+      },
+      "required": false,
+      "description": "Type of the card"
+    },
+    "card": {
+      "type": {
+        "name": "union",
+        "value": [
+          {
+            "name": "shape",
+            "value": {
+              "name": { "name": "string", "required": true },
+              "description": { "name": "string", "required": false },
+              "image": {
+                "name": "shape",
+                "value": {
+                  "src": { "name": "string", "required": true },
+                  "height": { "name": "number", "required": true },
+                  "width": { "name": "number", "required": true }
+                },
+                "required": false
+              },
+              "buttonLabel": { "name": "string", "required": true },
+              "href": { "name": "string", "required": true }
+            }
+          },
+          {
+            "name": "shape",
+            "value": {
+              "tag": { "name": "string", "required": false },
+              "title": { "name": "string", "required": false },
+              "body": { "name": "string", "required": false },
+              "cta": { "name": "custom", "raw": "CTA", "required": false },
+              "date": {
+                "name": "string",
+                "description": "Event specific prop",
+                "required": false
+              },
+              "location": { "name": "string", "required": false },
+              "prices": {
+                "name": "arrayOf",
+                "value": {
+                  "name": "shape",
+                  "value": {
+                    "label": { "name": "string", "required": true },
+                    "value": { "name": "string", "required": true }
+                  }
+                },
+                "required": false
+              }
+            }
+          },
+          {
+            "name": "shape",
+            "value": {
+              "introduction": {
+                "name": "string",
+                "description": "Display an introduction text before rendering any cards",
+                "required": false
+              },
+              "highlight": {
+                "name": "string",
+                "description": "Highlight a word in the introduction text",
+                "required": false
+              },
+              "hotline": {
+                "name": "shape",
+                "value": {
+                  "title": { "name": "string", "required": true },
+                  "text": { "name": "string", "required": false },
+                  "phone": {
+                    "name": "shape",
+                    "value": {
+                      "href": { "name": "string", "required": false },
+                      "label": { "name": "string", "required": false }
+                    },
+                    "required": false
+                  },
+                  "email": {
+                    "name": "shape",
+                    "value": {
+                      "href": { "name": "string", "required": false },
+                      "label": { "name": "string", "required": false }
+                    },
+                    "required": false
+                  },
+                  "simple": { "name": "bool", "required": false }
+                },
+                "description": "Render a hotline card",
+                "required": false
+              },
+              "contacts": {
+                "name": "arrayOf",
+                "value": {
+                  "name": "shape",
+                  "value": {
+                    "name": { "name": "string", "required": true },
+                    "jobTitle": { "name": "string", "required": false },
+                    "department": { "name": "string", "required": false },
+                    "image": {
+                      "name": "shape",
+                      "value": {
+                        "src": { "name": "string", "required": false }
+                      },
+                      "required": false
+                    },
+                    "phone": {
+                      "name": "shape",
+                      "value": {
+                        "href": { "name": "string", "required": false },
+                        "label": { "name": "string", "required": false }
+                      },
+                      "required": false
+                    },
+                    "email": {
+                      "name": "shape",
+                      "value": {
+                        "href": { "name": "string", "required": false },
+                        "label": { "name": "string", "required": false }
+                      },
+                      "required": false
+                    },
+                    "cta": { "name": "custom", "raw": "CTA", "required": false }
+                  }
+                },
+                "description": "Contact persons to render",
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "required": false,
+      "description": "The Media object should match the related cardType"
+    },
+    "title": {
+      "type": { "name": "string" },
+      "required": false,
+      "description": ""
+    }
+  }
+}
