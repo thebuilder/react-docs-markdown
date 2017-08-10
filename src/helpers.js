@@ -39,7 +39,7 @@ export function getTypeName(type) {
     case 'union':
       return 'OneOf'
     case 'custom':
-      return type.raw
+      return formatCustomType(type.raw)
     case 'shape':
       return 'Object'
     default:
@@ -81,4 +81,13 @@ export function filterProps(
     return false
 
   return true
+}
+
+function formatCustomType(name) {
+  return (
+    name
+      // If the name has the ".isRequired", remove it. Most likely a PropTypes.shape() object that's required.
+      // Docgen will pick it up, and mark the value as required
+      .replace('.isRequired', '')
+  )
 }
