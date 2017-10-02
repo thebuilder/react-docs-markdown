@@ -1,5 +1,5 @@
 import table from 'markdown-table'
-import { getKey, getTypeName, isComplexType, blockquote } from './helpers'
+import { getKey, getType, getTypeName, isComplexType, blockquote } from './helpers'
 
 export function describeType(type, level = 0) {
   switch (type.name) {
@@ -26,7 +26,7 @@ export function describeSubTypes(types, level = 0) {
   keys.forEach(key => {
     const prop = types[key]
     // Type can either be on the prop, or in the type field depending on depth.
-    const type = prop.type || prop
+    const type = getType(prop) || prop
 
     if (isComplexType(type.name)) {
       const result = describeType(type, level)

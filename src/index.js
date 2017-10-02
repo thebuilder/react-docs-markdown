@@ -1,5 +1,5 @@
 import table from 'markdown-table'
-import { getDefaultValue, getKey, getTypeName, filterProps } from './helpers'
+import { getDefaultValue, getKey, getType, getTypeName, filterProps } from './helpers'
 import { describeSubTypes } from './types'
 
 const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description']
@@ -27,8 +27,8 @@ function addProps(props, options) {
     ...keys.map(key => {
       const prop = filteredProps[key]
       const row = [
-        getKey(key, prop.type),
-        getTypeName(prop.type),
+        getKey(key, getType(prop)),
+        getTypeName(getType(prop)),
         getDefaultValue(prop),
         prop.required,
         prop.description,

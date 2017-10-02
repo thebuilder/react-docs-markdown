@@ -1,9 +1,13 @@
 import kebab from 'lodash/fp/kebabCase'
 import capitalize from 'lodash/fp/capitalize'
 
+export function getType(prop) {
+  return prop.type || prop.flowType
+}
+
 export function getDefaultValue(prop) {
   const value = prop.defaultValue
-  const type = prop.type.name
+  const type = getType(prop).name
   if (!value) {
     switch (type) {
       case 'bool':
@@ -68,14 +72,14 @@ export function filterProps(
   prop,
   { excludeKey, excludeType, excludeDescription },
 ) {
-  if (!prop.type) {
+  if (!getType(prop)) {
     // eslint-disable-next-line no-console
     console.error(
       `Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`,
     )
   }
   if (excludeKey && excludeKey.test(name)) return false
-  if (excludeType && prop.type && excludeType.test(prop.type.name || prop.type))
+  if (excludeType && getType(prop) && excludeType.test(getType(prop).name))
     return false
   if (excludeDescription && excludeDescription.test(prop.description))
     return false
