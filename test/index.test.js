@@ -4,12 +4,26 @@ import path from 'path'
 import docsToMarkdown from '../src/index'
 
 const inputJson = require('./input/CaseList.json')
-const cardsJson = require('./input/Cards.json')
-const imageJson = require('./input/Image.json')
-const textAreaJson = require('./input/TextArea.json')
-const heroJson = require('./input/Hero.json')
+
+const inputs = [
+  inputJson,
+  require('./input/Cards.json'),
+  require('./input/Image.json'),
+  require('./input/TextArea.json'),
+  require('./input/Hero.json'),
+  require('./input/Flow.json'),
+]
 
 describe('Docs to markdown', () => {
+  describe('Should handle various input', () => {
+    inputs.forEach(input => {
+      it(`should convert ${input.displayName}`, () => {
+        const result = docsToMarkdown(input, input.displayName)
+        expect(result).toMatchSnapshot()
+        save(input.displayName, result)
+      })
+    })
+  })
   it('should convert caselist', () => {
     const result = docsToMarkdown(inputJson, 'CaseList')
     expect(result).toMatchSnapshot()
@@ -18,31 +32,6 @@ describe('Docs to markdown', () => {
     expect(result.includes('Arrayof')).toEqual(true)
     expect(result.includes('@custom-exclude')).toEqual(true)
     expect(result.includes('@internal')).toEqual(false) // The @internal description should be excluded.
-    save('CaseList', result)
-  })
-
-  it('should convert Image', () => {
-    const result = docsToMarkdown(imageJson, 'Image')
-    expect(result).toMatchSnapshot()
-    save('Image', result)
-  })
-
-  it('should convert Cards', () => {
-    const result = docsToMarkdown(cardsJson, 'Cards')
-    expect(result).toMatchSnapshot()
-    save('Cards', result)
-  })
-
-  it('should convert TextArea', () => {
-    const result = docsToMarkdown(textAreaJson, 'TextArea')
-    expect(result).toMatchSnapshot()
-    save('TextArea', result)
-  })
-
-  it('should convert Hero', () => {
-    const result = docsToMarkdown(heroJson, 'Hero')
-    expect(result).toMatchSnapshot()
-    save('Hero', result)
   })
 
   it('should handle no props', () => {

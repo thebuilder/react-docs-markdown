@@ -1,6 +1,10 @@
 import kebab from 'lodash/fp/kebabCase'
 import capitalize from 'lodash/fp/capitalize'
 
+export function isFlowType(prop) {
+  return !!prop.flowType
+}
+
 export function getType(prop) {
   return prop.type || prop.flowType
 }
@@ -11,6 +15,7 @@ export function getDefaultValue(prop) {
   if (!value) {
     switch (type) {
       case 'bool':
+      case 'boolean':
         return false // Default for boolean is false
       default:
         return ''
@@ -41,10 +46,12 @@ export function getKey(key, type) {
 export function getTypeName(type) {
   switch (type.name) {
     case 'union':
-      return 'OneOf'
+    case 'literalsAndUnion':
+      return 'Union'
     case 'custom':
       return formatCustomType(type.raw)
     case 'shape':
+    case 'signature':
       return 'Object'
     default:
       return capitalize(type.name)
@@ -54,9 +61,11 @@ export function getTypeName(type) {
 export function isComplexType(name) {
   switch (name) {
     case 'union':
+    case 'literalsAndUnion':
     case 'shape':
     case 'arrayOf':
     case 'enum':
+    case 'signature':
       return true
     default:
       return false
@@ -79,8 +88,9 @@ export function filterProps(
     )
   }
   if (excludeKey && excludeKey.test(name)) return false
-  if (excludeType && getType(prop) && excludeType.test(getType(prop).name))
-    return false
+  const type = getType(prop)
+
+  if (excludeType && type && excludeType.test(type.name)) return false
   if (excludeDescription && excludeDescription.test(prop.description))
     return false
 

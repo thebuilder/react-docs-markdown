@@ -10,7 +10,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -62,7 +62,7 @@ Type: _Enum_
 --------------------------------------------------------------------------------
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -117,7 +117,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -169,7 +169,7 @@ Type: _Enum_
 --------------------------------------------------------------------------------
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -224,7 +224,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | component                         | Node    |         | false    | @internal Use another root component.                              |
 
 ## Complex Props
@@ -276,7 +276,7 @@ Type: _Enum_
 --------------------------------------------------------------------------------
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -510,13 +510,13 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -570,13 +570,13 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -630,13 +630,13 @@ Overview of all the components
 ## Props
 | Name                              | Type   | Default | Required | Description                                                        |
 | --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------ |
-| [margin](#markdown-header-margin) | OneOf  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union  | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 
@@ -681,7 +681,7 @@ Margin can be either a string, or an object with top/bottom margin
 "
 `;
 
-exports[`Docs to markdown should convert Cards 1`] = `
+exports[`Docs to markdown Should handle various input should convert Cards 1`] = `
 "# Cards
 
 ## Props
@@ -733,7 +733,7 @@ Type: _Arrayof_
 | title                             | String | false    |
 | body                              | String | false    |
 | [type](#markdown-header-type)     | Enum   | false    |
-| [fields](#markdown-header-fields) | OneOf  | false    |
+| [fields](#markdown-header-fields) | Union  | false    |
 | [cta](#markdown-header-cta)       | Object | false    |
 
 #### type
@@ -746,7 +746,7 @@ Type: _Enum_
 | event   | String |
 
 #### fields
-Type: _OneOf_
+Type: _Union_
 
 ##### Object
 
@@ -776,7 +776,141 @@ Type: _Object_
 "
 `;
 
-exports[`Docs to markdown should convert Hero 1`] = `
+exports[`Docs to markdown Should handle various input should convert CaseList 1`] = `
+"# CaseList
+
+Overview of all the components
+
+
+## Props
+| Name                              | Type    | Default | Required | Description                                                        |
+| --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
+| [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
+| [margin](#markdown-header-margin) | Union   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| backgroundColor                   | String  |         | true     | @custom-exclude                                                    |
+
+## Complex Props
+
+### items
+Type: _Arrayof_
+
+**items** is an array of the following type:
+
+| Name                                | Type   | Required |
+| ----------------------------------- | ------ | -------- |
+| className                           | String | false    |
+| backgroundColor                     | String | false    |
+| backgroundImage                     | String | false    |
+| color                               | String | false    |
+| fullWidth                           | Bool   | false    |
+| category                            | String | false    |
+| title                               | String | true     |
+| body                                | String | false    |
+| [link](#markdown-header-link)       | Object | true     |
+| [preview](#markdown-header-preview) | Object | false    |
+
+#### link
+Type: _Object_
+
+| Name   | Type   | Required |
+| ------ | ------ | -------- |
+| href   | String | true     |
+| target | String | false    |
+
+#### preview
+Type: _Object_
+
+| Name                          | Type   | Required |
+| ----------------------------- | ------ | -------- |
+| image                         | String | true     |
+| [type](#markdown-header-type) | Enum   | true     |
+
+##### type
+Type: _Enum_
+
+| Value   | Type   |
+| ------- | ------ |
+| iphone  | String |
+| ipad    | String |
+| desktop | String |
+| dual    | String |
+
+--------------------------------------------------------------------------------
+
+### margin
+Type: _Union_
+
+Margin can be either a string, or an object with top/bottom margin
+
+**margin** should be one of the following types:
+
+#### Object
+
+> | Name                              | Type | Required |
+> | --------------------------------- | ---- | -------- |
+> | [top](#markdown-header-top)       | Enum | false    |
+> | [bottom](#markdown-header-bottom) | Enum | false    |
+> 
+> ##### top
+> Type: _Enum_
+> 
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
+> 
+> ##### bottom
+> Type: _Enum_
+> 
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
+> 
+
+
+#### Enum
+
+> | Value | Type   |
+> | ----- | ------ |
+> | none  | String |
+> | small | String |
+> | large | String |
+> 
+
+"
+`;
+
+exports[`Docs to markdown Should handle various input should convert Flow 1`] = `
+"# Flow
+
+General component description.
+
+
+## Props
+| Name                                                    | Type   | Default | Required | Description                |
+| ------------------------------------------------------- | ------ | ------- | -------- | -------------------------- |
+| primitive                                               | Number |         | true     | Description of prop \\"foo\\". |
+| [literalsAndUnion](#markdown-header-literals-and-union) | Union  |         | true     | Description of prop \\"bar\\". |
+| arr                                                     | Array  |         | true     |                            |
+| [func](#markdown-header-func)                           | Object |         | false    |                            |
+| [obj](#markdown-header-obj)                             | Object |         | false    |                            |
+
+## Complex Props
+
+### func
+Type: _Object_
+signature
+--------------------------------------------------------------------------------
+
+### obj
+Type: _Object_
+signature"
+`;
+
+exports[`Docs to markdown Should handle various input should convert Hero 1`] = `
 "# Hero
 
 ## Props
@@ -784,22 +918,22 @@ exports[`Docs to markdown should convert Hero 1`] = `
 | ---------------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
 | tag                                      | String |         | false    | The \\"tag\\" the small label rendered in the lower corner                                                        |
 | headline                                 | String |         | true     | The overall page title                                                                                        |
-| [content](#markdown-header-content)      | OneOf  |         | true     | Content can be a paragraph, or an array of paragraphs                                                         |
+| [content](#markdown-header-content)      | Union  |         | true     | Content can be a paragraph, or an array of paragraphs                                                         |
 | cta                                      | CTA    |         | false    | Add a button with a CTA below the content                                                                     |
 | [goBack](#markdown-header-go-back)       | Object |         | false    | The back link to render, to return the user to an overview page                                               |
 | [share](#markdown-header-share)          | Object |         | false    | Share widget props, if the Hero should render a Share widget                                                  |
 | [margin](#markdown-header-margin)        | Enum   |         | false    | Remove the margin between hero and section by setting it to none. Used if the following ribbon has no pattern |
 | [pattern](#markdown-header-pattern)      | Enum   |         | false    | Use a Pattern instead of the theme                                                                            |
 | [mediaType](#markdown-header-media-type) | Enum   |         | false    | Type of the media                                                                                             |
-| [media](#markdown-header-media)          | OneOf  |         | false    | The Media object should match the related mediaType                                                           |
+| [media](#markdown-header-media)          | Union  |         | false    | The Media object should match the related mediaType                                                           |
 | [cardType](#markdown-header-card-type)   | Enum   |         | false    | Type of the card                                                                                              |
-| [card](#markdown-header-card)            | OneOf  |         | false    | The Media object should match the related cardType                                                            |
+| [card](#markdown-header-card)            | Union  |         | false    | The Media object should match the related cardType                                                            |
 | title                                    | String |         | false    |                                                                                                               |
 
 ## Complex Props
 
 ### content
-Type: _OneOf_
+Type: _Union_
 
 Content can be a paragraph, or an array of paragraphs
 
@@ -902,7 +1036,7 @@ Type of the media
 --------------------------------------------------------------------------------
 
 ### media
-Type: _OneOf_
+Type: _Union_
 
 The Media object should match the related mediaType
 
@@ -944,7 +1078,7 @@ Type of the card
 --------------------------------------------------------------------------------
 
 ### card
-Type: _OneOf_
+Type: _Union_
 
 The Media object should match the related cardType
 
@@ -1073,7 +1207,7 @@ The Media object should match the related cardType
 "
 `;
 
-exports[`Docs to markdown should convert Image 1`] = `
+exports[`Docs to markdown Should handle various input should convert Image 1`] = `
 "# Image
 
 Image handles fetching the correct Imgix image, and rendering it onto the page.
@@ -1155,7 +1289,7 @@ The method used when cropping the image: https://docs.imgix.com/apis/url/size/cr
 "
 `;
 
-exports[`Docs to markdown should convert TextArea 1`] = `
+exports[`Docs to markdown Should handle various input should convert TextArea 1`] = `
 "# TextArea
 
 ## Props
@@ -1178,7 +1312,7 @@ Overview of all the components
 | Name                              | Type    | Default | Required | Description                                                        |
 | --------------------------------- | ------- | ------- | -------- | ------------------------------------------------------------------ |
 | [items](#markdown-header-items)   | Arrayof |         | true     |                                                                    |
-| [margin](#markdown-header-margin) | OneOf   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
+| [margin](#markdown-header-margin) | Union   | 'small' | false    | Margin can be either a string, or an object with top/bottom margin |
 | backgroundColor                   | String  |         | true     | @custom-exclude                                                    |
 
 ## Complex Props
@@ -1230,7 +1364,7 @@ Type: _Enum_
 --------------------------------------------------------------------------------
 
 ### margin
-Type: _OneOf_
+Type: _Union_
 
 Margin can be either a string, or an object with top/bottom margin
 

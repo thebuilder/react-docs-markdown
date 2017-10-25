@@ -1,5 +1,6 @@
 {
   "description": "",
+  "displayName": "TextArea",
   "methods": [],
   "props": {
     "debounce": {

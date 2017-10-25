@@ -1,5 +1,11 @@
 import table from 'markdown-table'
-import { getKey, getType, getTypeName, isComplexType, blockquote } from './helpers'
+import {
+  getKey,
+  getType,
+  getTypeName,
+  isComplexType,
+  blockquote,
+} from './helpers'
 
 export function describeType(type, level = 0) {
   switch (type.name) {
@@ -122,6 +128,7 @@ export function shape(types, level) {
 }
 
 export function union(types, level) {
+  if (!types) return ''
   return types.reduce((output, type) => {
     let result = `\n####${'#'.repeat(Math.min(level, 2))} ${getTypeName(
       type,

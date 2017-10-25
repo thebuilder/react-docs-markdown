@@ -1,5 +1,6 @@
 {
   "description": "Overview of all the components",
+  "displayName": "CaseList",
   "props": {
     "items": {
       "type": {

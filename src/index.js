@@ -1,5 +1,12 @@
 import table from 'markdown-table'
-import { getDefaultValue, getKey, getType, getTypeName, filterProps } from './helpers'
+import {
+  getDefaultValue,
+  getKey,
+  getType,
+  getTypeName,
+  filterProps,
+  isFlowType,
+} from './helpers'
 import { describeSubTypes } from './types'
 
 const TABLE_HEADERS = ['Name', 'Type', 'Default', 'Required', 'Description']
@@ -21,11 +28,12 @@ function addProps(props, options) {
   )
 
   let output = '\n## Props\n'
-
   const items = [
     TABLE_HEADERS,
     ...keys.map(key => {
       const prop = filteredProps[key]
+      //const isFlow = isFlowType(prop)
+
       const row = [
         getKey(key, getType(prop)),
         getTypeName(getType(prop)),
