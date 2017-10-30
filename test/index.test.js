@@ -12,6 +12,9 @@ const inputs = [
   require('./input/TextArea.json'),
   require('./input/Hero.json'),
   require('./input/Flow.json'),
+  require('./input/FlowFooter.json'),
+  require('./input/FlowImageModel.json'),
+  require('./input/FlowLinkModel.json'),
 ]
 
 describe('Docs to markdown', () => {
@@ -29,7 +32,7 @@ describe('Docs to markdown', () => {
     expect(result).toMatchSnapshot()
     expect(typeof result).toEqual('string')
     expect(result.includes('### margin')).toEqual(true)
-    expect(result.includes('Arrayof')).toEqual(true)
+    expect(result.includes('arrayOf')).toEqual(true)
     expect(result.includes('@custom-exclude')).toEqual(true)
     expect(result.includes('@internal')).toEqual(false) // The @internal description should be excluded.
   })

@@ -1,0 +1,188 @@
+{
+  "description": "",
+  "displayName": "FlowImageModel",
+  "methods": [],
+  "props": {
+    "src": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": "Image src URL"
+    },
+    "height": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Original image height"
+    },
+    "width": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Original image width"
+    },
+    "alt": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Image alt text"
+    },
+    "contain": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": false,
+      "description": "Contain the image inside the area, instead of cropping"
+    },
+    "alignX": {
+      "flowType": {
+        "name": "union",
+        "raw": "'left' | 'right' | 'center'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'left'"
+          },
+          {
+            "name": "literal",
+            "value": "'right'"
+          },
+          {
+            "name": "literal",
+            "value": "'center'"
+          }
+        ]
+      },
+      "required": false,
+      "description": "Align the image on X axis, default to center in the browser"
+    },
+    "alignY": {
+      "flowType": {
+        "name": "union",
+        "raw": "'top' | 'bottom' | 'center'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'top'"
+          },
+          {
+            "name": "literal",
+            "value": "'bottom'"
+          },
+          {
+            "name": "literal",
+            "value": "'center'"
+          }
+        ]
+      },
+      "required": false,
+      "description": "Align the image on Y axis, default to center in the browser"
+    },
+    "crop": {
+      "flowType": {
+        "name": "union",
+        "raw": "'faces'\n  | 'entropy'\n  | 'edges'\n  | 'top'\n  | 'bottom'\n  | 'left'\n  | 'right'\n  | ''\n  | null",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'faces'"
+          },
+          {
+            "name": "literal",
+            "value": "'entropy'"
+          },
+          {
+            "name": "literal",
+            "value": "'edges'"
+          },
+          {
+            "name": "literal",
+            "value": "'top'"
+          },
+          {
+            "name": "literal",
+            "value": "'bottom'"
+          },
+          {
+            "name": "literal",
+            "value": "'left'"
+          },
+          {
+            "name": "literal",
+            "value": "'right'"
+          },
+          {
+            "name": "literal",
+            "value": "''"
+          },
+          {
+            "name": "unknown"
+          }
+        ]
+      },
+      "required": false,
+      "description": "The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop"
+    },
+    "fill": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": false,
+      "description": "Fill the container element. On mobile it will revert to aspect ratio"
+    },
+    "maxAspectRatio": {
+      "flowType": {
+        "name": "number"
+      },
+      "required": false,
+      "description": "The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall."
+    },
+    "imgixParams": {
+      "flowType": {
+        "name": "signature",
+        "type": "object",
+        "raw": "{\n  [key: string]: string,\n}",
+        "signature": {
+          "properties": [
+            {
+              "key": {
+                "name": "string"
+              },
+              "value": {
+                "name": "string",
+                "required": true
+              }
+            }
+          ]
+        }
+      },
+      "required": false,
+      "description": "Any custom Imgix params"
+    },
+    "imageProps": {
+      "flowType": {
+        "name": "Object"
+      },
+      "required": false,
+      "description": "Extra tags to pass as img HTML attributes"
+    },
+    "fadeIn": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": false,
+      "description": "Fade in the image when it's loaded. Creates a nice effect with the blurred image"
+    },
+    "disableBlur": {
+      "flowType": {
+        "name": "boolean"
+      },
+      "required": false,
+      "description": "Disable the blurred placeholder shown until size is ready. Will instead show a spinner"
+    }
+  }
+}

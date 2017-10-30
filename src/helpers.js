@@ -54,7 +54,7 @@ export function getTypeName(type) {
     case 'signature':
       return 'Object'
     default:
-      return capitalize(type.name)
+      return type.name
   }
 }
 
@@ -64,6 +64,7 @@ export function isComplexType(name) {
     case 'literalsAndUnion':
     case 'shape':
     case 'arrayOf':
+    case 'Array':
     case 'enum':
     case 'signature':
       return true

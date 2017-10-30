@@ -5,7 +5,6 @@ import {
   getType,
   getTypeName,
   filterProps,
-  isFlowType,
 } from './helpers'
 import { describeSubTypes } from './types'
 
@@ -32,7 +31,6 @@ function addProps(props, options) {
     TABLE_HEADERS,
     ...keys.map(key => {
       const prop = filteredProps[key]
-      //const isFlow = isFlowType(prop)
 
       const row = [
         getKey(key, getType(prop)),

@@ -1,0 +1,67 @@
+{
+  "description": "",
+  "displayName": "FlowFooter",
+  "methods": [
+    {
+      "name": "renderColumn",
+      "docblock": null,
+      "modifiers": [
+        "static"
+      ],
+      "params": [
+        {
+          "name": "col",
+          "type": null
+        },
+        {
+          "name": "key",
+          "type": null
+        }
+      ],
+      "returns": null
+    }
+  ],
+  "props": {
+    "social": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "SocialModel"
+          }
+        ],
+        "raw": "Array<SocialModel>"
+      },
+      "required": true,
+      "description": "An array of social links"
+    },
+    "columns": {
+      "flowType": {
+        "name": "Array",
+        "elements": [
+          {
+            "name": "Array",
+            "elements": [
+              {
+                "name": "union",
+                "raw": "LinkModel | string",
+                "elements": [
+                  {
+                    "name": "LinkModel"
+                  },
+                  {
+                    "name": "string"
+                  }
+                ]
+              }
+            ],
+            "raw": "Array<LinkModel | string>"
+          }
+        ],
+        "raw": "Array<Array<LinkModel | string>>"
+      },
+      "required": true,
+      "description": "An array of columns, where each column contains an array or either LinkModels or plain string labels"
+    }
+  }
+}

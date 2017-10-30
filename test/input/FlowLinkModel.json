@@ -1,0 +1,56 @@
+{
+  "description": "The LinkModel is used for all navigation links.",
+  "displayName": "FlowLinkModel",
+  "methods": [],
+  "props": {
+    "href": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": true,
+      "description": ""
+    },
+    "label": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Label is the related label or text for the link or button"
+    },
+    "title": {
+      "flowType": {
+        "name": "string"
+      },
+      "required": false,
+      "description":
+        "The title HTML Attribute, can be used to create a title tooltip. It should be different from the label"
+    },
+    "target": {
+      "flowType": {
+        "name": "union",
+        "raw": "'_blank' | '_self' | '_parent' | '_top'",
+        "elements": [
+          {
+            "name": "literal",
+            "value": "'_blank'"
+          },
+          {
+            "name": "literal",
+            "value": "'_self'"
+          },
+          {
+            "name": "literal",
+            "value": "'_parent'"
+          },
+          {
+            "name": "literal",
+            "value": "'_top'"
+          }
+        ]
+      },
+      "required": false,
+      "description":
+        "The anchor target, uses the browser default (_self) if not set"
+    }
+  }
+}

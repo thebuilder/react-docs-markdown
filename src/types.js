@@ -3,26 +3,11 @@ import {
   getKey,
   getType,
   getTypeName,
+  isFlowType,
   isComplexType,
   blockquote,
 } from './helpers'
-
-export function describeType(type, level = 0) {
-  switch (type.name) {
-    case 'shape':
-      return shape(type.value, level)
-    case 'enum':
-      return enumType(type.value)
-    case 'union':
-      return union(type.value, level)
-    case 'arrayOf':
-      return arrayOf(type.value, level)
-    case 'custom':
-      return type.raw || type.name
-    default:
-      return type.value || type.name
-  }
-}
+import { describeFlowType } from './flowTypes'
 
 export function describeSubTypes(types, level = 0) {
   const keys = Object.keys(types)
@@ -33,9 +18,11 @@ export function describeSubTypes(types, level = 0) {
     const prop = types[key]
     // Type can either be on the prop, or in the type field depending on depth.
     const type = getType(prop) || prop
-
     if (isComplexType(type.name)) {
-      const result = describeType(type, level)
+      const result = isFlowType(prop)
+        ? describeFlowType(type, level)
+        : describeType(type, level)
+
       if (result) {
         // Generate a horizontal ruler
         if (level === 0 && index > 0) subTypes += `\n${'-'.repeat(80)}\n`
@@ -50,6 +37,8 @@ export function describeSubTypes(types, level = 0) {
           // Add description on first level
           let typeDescription
           switch (type.name) {
+            case 'Array':
+              break
             case 'arrayOf':
               typeDescription = `**${key}** is an array of the following type:`
               break
@@ -58,9 +47,6 @@ export function describeSubTypes(types, level = 0) {
               break
             case 'enum':
               typeDescription = `**${key}** should be one of the following values:`
-              break
-            case 'union':
-              typeDescription = `**${key}** should be one of the following types:`
               break
             default:
               break
@@ -76,6 +62,23 @@ export function describeSubTypes(types, level = 0) {
   })
 
   return subTypes
+}
+
+export function describeType(type, level = 0) {
+  switch (type.name) {
+    case 'shape':
+      return shape(type.value, level)
+    case 'enum':
+      return enumType(type.value)
+    case 'union':
+      return union(type, level)
+    case 'arrayOf':
+      return arrayOf(type.value, level)
+    case 'custom':
+      return type.raw || type.name
+    default:
+      return type.value || type.name
+  }
 }
 
 export function arrayOf(type, level) {
@@ -127,14 +130,17 @@ export function shape(types, level) {
   return output
 }
 
-export function union(types, level) {
-  if (!types) return ''
-  return types.reduce((output, type) => {
-    let result = `\n####${'#'.repeat(Math.min(level, 2))} ${getTypeName(
-      type,
-    )}\n`
-    result += blockquote(describeType(type, level + 1))
-    result += '\n\n' // Break the blockquote by adding double line break
-    return output + result
-  }, '')
+export function union(type, level) {
+  if (type.value) {
+    return type.value.reduce((output, type) => {
+      let result = `\n####${'#'.repeat(Math.min(level, 2))} ${getTypeName(
+        type,
+      )}\n`
+      result += blockquote(describeType(type, level + 1))
+      result += '\n\n' // Break the blockquote by adding double line break
+      return output + result
+    }, '')
+  }
+
+  return ''
 }
