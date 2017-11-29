@@ -36,7 +36,7 @@ function addProps(props, options) {
       if (isFlowType(prop)) isFlow = true
 
       const row = [
-        getKey(key, getType(prop)),
+        isFlowType(prop) ? key : getKey(key, getType(prop)),
         getTypeName(getType(prop)),
         getDefaultValue(prop),
         prop.required,

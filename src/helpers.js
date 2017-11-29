@@ -100,12 +100,16 @@ export function filterProps(
 }
 
 function formatCustomType(name) {
-  const response = name
-    // If the name has the ".isRequired", remove it. Most likely a PropTypes.shape() object that's required.
-    // Docgen will pick it up, and mark the value as required
-    .replace('.isRequired', '')
-    // Replace pipe with ASCII, so it doesn't break tables
-    .replace(/\|/g, '&#124;')
-
-  return response
+  return (
+    name
+      // If the name has the ".isRequired", remove it. Most likely a PropTypes.shape() object that's required.
+      // Docgen will pick it up, and mark the value as required
+      .replace('.isRequired', '')
+      // Replace pipe with ASCII, so it doesn't break tables
+      .replace(/\|/g, '&#124;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\[/g, '&#91;')
+      .replace(/]/g, '&#93;')
+  )
 }

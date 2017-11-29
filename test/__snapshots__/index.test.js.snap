@@ -876,13 +876,13 @@ General component description.
 
 
 ## Props
-| Name                                                    | Type                                        | Default | Required | Description                |
-| ------------------------------------------------------- | ------------------------------------------- | ------- | -------- | -------------------------- |
-| primitive                                               | number                                      |         | true     | Description of prop \\"foo\\". |
-| [literalsAndUnion](#markdown-header-literals-and-union) | 'string' &#124; 'otherstring' &#124; number |         | true     | Description of prop \\"bar\\". |
-| [arr](#markdown-header-arr)                             | Array<any>                                  |         | true     |                            |
-| [func](#markdown-header-func)                           | (value: string) => void                     |         | false    |                            |
-| [obj](#markdown-header-obj)                             | { subvalue: ?boolean }                      |         | false    |                            |
+| Name             | Type                                        | Default | Required | Description                |
+| ---------------- | ------------------------------------------- | ------- | -------- | -------------------------- |
+| primitive        | number                                      |         | true     | Description of prop \\"foo\\". |
+| literalsAndUnion | 'string' &#124; 'otherstring' &#124; number |         | true     | Description of prop \\"bar\\". |
+| arr              | Array&lt;any&gt;                            |         | true     |                            |
+| func             | (value: string) =&gt; void                  |         | false    |                            |
+| obj              | { subvalue: ?boolean }                      |         | false    |                            |
 "
 `;
 
@@ -890,10 +890,10 @@ exports[`Docs to markdown Should handle various input should convert FlowFooter 
 "# FlowFooter
 
 ## Props
-| Name                                | Type                                  | Default | Required | Description                                                                                          |
-| ----------------------------------- | ------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------- |
-| [social](#markdown-header-social)   | Array<SocialModel>                    |         | true     | An array of social links                                                                             |
-| [columns](#markdown-header-columns) | Array<Array<LinkModel &#124; string>> |         | true     | An array of columns, where each column contains an array or either LinkModels or plain string labels |
+| Name    | Type                                              | Default | Required | Description                                                                                          |
+| ------- | ------------------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| social  | Array&lt;SocialModel&gt;                          |         | true     | An array of social links                                                                             |
+| columns | Array&lt;Array&lt;LinkModel &#124; string&gt;&gt; |         | true     | An array of columns, where each column contains an array or either LinkModels or plain string labels |
 "
 `;
 
@@ -901,22 +901,22 @@ exports[`Docs to markdown Should handle various input should convert FlowImageMo
 "# FlowImageModel
 
 ## Props
-| Name                                         | Type                                                                                                                                                            | Default | Required | Description                                                                                                                  |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| src                                          | string                                                                                                                                                          |         | true     | Image src URL                                                                                                                |
-| height                                       | number                                                                                                                                                          |         | true     | Original image height                                                                                                        |
-| width                                        | number                                                                                                                                                          |         | true     | Original image width                                                                                                         |
-| alt                                          | string                                                                                                                                                          |         | false    | Image alt text                                                                                                               |
-| contain                                      | boolean                                                                                                                                                         | false   | false    | Contain the image inside the area, instead of cropping                                                                       |
-| [alignX](#markdown-header-align-x)           | 'left' &#124; 'right' &#124; 'center'                                                                                                                           |         | false    | Align the image on X axis, default to center in the browser                                                                  |
-| [alignY](#markdown-header-align-y)           | 'top' &#124; 'bottom' &#124; 'center'                                                                                                                           |         | false    | Align the image on Y axis, default to center in the browser                                                                  |
-| [crop](#markdown-header-crop)                | 'faces'<br>  &#124; 'entropy'<br>  &#124; 'edges'<br>  &#124; 'top'<br>  &#124; 'bottom'<br>  &#124; 'left'<br>  &#124; 'right'<br>  &#124; ''<br>  &#124; null |         | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                           |
-| fill                                         | boolean                                                                                                                                                         | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                         |
-| maxAspectRatio                               | number                                                                                                                                                          |         | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall. |
-| [imgixParams](#markdown-header-imgix-params) | {<br>  [key: string]: string,<br>}                                                                                                                              |         | false    | Any custom Imgix params                                                                                                      |
-| imageProps                                   | Object                                                                                                                                                          |         | false    | Extra tags to pass as img HTML attributes                                                                                    |
-| fadeIn                                       | boolean                                                                                                                                                         | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                             |
-| disableBlur                                  | boolean                                                                                                                                                         | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                       |
+| Name           | Type                                                                                                                                                            | Default | Required | Description                                                                                                                  |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| src            | string                                                                                                                                                          |         | true     | Image src URL                                                                                                                |
+| height         | number                                                                                                                                                          |         | true     | Original image height                                                                                                        |
+| width          | number                                                                                                                                                          |         | true     | Original image width                                                                                                         |
+| alt            | string                                                                                                                                                          |         | false    | Image alt text                                                                                                               |
+| contain        | boolean                                                                                                                                                         | false   | false    | Contain the image inside the area, instead of cropping                                                                       |
+| alignX         | 'left' &#124; 'right' &#124; 'center'                                                                                                                           |         | false    | Align the image on X axis, default to center in the browser                                                                  |
+| alignY         | 'top' &#124; 'bottom' &#124; 'center'                                                                                                                           |         | false    | Align the image on Y axis, default to center in the browser                                                                  |
+| crop           | 'faces'<br>  &#124; 'entropy'<br>  &#124; 'edges'<br>  &#124; 'top'<br>  &#124; 'bottom'<br>  &#124; 'left'<br>  &#124; 'right'<br>  &#124; ''<br>  &#124; null |         | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                           |
+| fill           | boolean                                                                                                                                                         | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                         |
+| maxAspectRatio | number                                                                                                                                                          |         | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall. |
+| imgixParams    | {<br>  &#91;key: string&#93;: string,<br>}                                                                                                                      |         | false    | Any custom Imgix params                                                                                                      |
+| imageProps     | Object                                                                                                                                                          |         | false    | Extra tags to pass as img HTML attributes                                                                                    |
+| fadeIn         | boolean                                                                                                                                                         | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                             |
+| disableBlur    | boolean                                                                                                                                                         | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                       |
 "
 `;
 
@@ -927,12 +927,12 @@ The LinkModel is used for all navigation links.
 
 
 ## Props
-| Name                              | Type                                                   | Default | Required | Description                                                                                            |
-| --------------------------------- | ------------------------------------------------------ | ------- | -------- | ------------------------------------------------------------------------------------------------------ |
-| href                              | string                                                 |         | true     |                                                                                                        |
-| label                             | string                                                 |         | false    | Label is the related label or text for the link or button                                              |
-| title                             | string                                                 |         | false    | The title HTML Attribute, can be used to create a title tooltip. It should be different from the label |
-| [target](#markdown-header-target) | '_blank' &#124; '_self' &#124; '_parent' &#124; '_top' |         | false    | The anchor target, uses the browser default (_self) if not set                                         |
+| Name   | Type                                                   | Default | Required | Description                                                                                            |
+| ------ | ------------------------------------------------------ | ------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| href   | string                                                 |         | true     |                                                                                                        |
+| label  | string                                                 |         | false    | Label is the related label or text for the link or button                                              |
+| title  | string                                                 |         | false    | The title HTML Attribute, can be used to create a title tooltip. It should be different from the label |
+| target | '_blank' &#124; '_self' &#124; '_parent' &#124; '_top' |         | false    | The anchor target, uses the browser default (_self) if not set                                         |
 "
 `;
 
