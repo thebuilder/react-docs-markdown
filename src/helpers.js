@@ -43,14 +43,12 @@ export function getKey(key, type) {
  * @returns {*}
  */
 export function getTypeName(type) {
-  if (type.raw) return type.raw
+  if (type.raw) return formatCustomType(type.raw)
 
   switch (type.name) {
     case 'union':
     case 'literalsAndUnion':
       return 'Union'
-    case 'custom':
-      return formatCustomType(type.raw)
     case 'shape':
     case 'signature':
       return 'Object'
@@ -107,5 +105,6 @@ function formatCustomType(name) {
       // If the name has the ".isRequired", remove it. Most likely a PropTypes.shape() object that's required.
       // Docgen will pick it up, and mark the value as required
       .replace('.isRequired', '')
+      .replace('|', '|')
   )
 }
