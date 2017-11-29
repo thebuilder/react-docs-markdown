@@ -44,12 +44,12 @@ export function getKey(key, type) {
  * @returns {*}
  */
 export function getTypeName(type) {
+  if (type.raw) return type.raw
+
   switch (type.name) {
     case 'union':
     case 'literalsAndUnion':
       return 'Union'
-    case 'custom':
-      return formatCustomType(type.raw)
     case 'shape':
     case 'signature':
       return 'Object'
@@ -85,7 +85,9 @@ export function filterProps(
   if (!getType(prop)) {
     // eslint-disable-next-line no-console
     console.error(
-      `Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`,
+      `Found prop '${
+        name
+      }' without type. Has it been removed, but left in 'defaultProps'?`,
     )
   }
   if (excludeKey && excludeKey.test(name)) return false

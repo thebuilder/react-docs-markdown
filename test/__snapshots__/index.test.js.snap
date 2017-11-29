@@ -876,55 +876,13 @@ General component description.
 
 
 ## Props
-| Name                                                    | Type   | Default | Required | Description                |
-| ------------------------------------------------------- | ------ | ------- | -------- | -------------------------- |
-| primitive                                               | number |         | true     | Description of prop \\"foo\\". |
-| [literalsAndUnion](#markdown-header-literals-and-union) | Union  |         | true     | Description of prop \\"bar\\". |
-| [arr](#markdown-header-arr)                             | Array  |         | true     |                            |
-| [func](#markdown-header-func)                           | Object |         | false    |                            |
-| [obj](#markdown-header-obj)                             | Object |         | false    |                            |
-
-## Complex Props
-
-### literalsAndUnion
-Type: _Union_
-
-Description of prop \\"bar\\".
-
-Should be one of the following:
-
-\`\`\`
-'string'
-'otherstring'
-number
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### arr
-Type: _Array_
-
-\`\`\`
-any
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### func
-Type: _Object_
-
-\`\`\`
-(value: string) => void
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### obj
-Type: _Object_
-
-\`\`\`
-{ subvalue: ?boolean }
-\`\`\`
+| Name                                                    | Type                              | Default | Required | Description                |
+| ------------------------------------------------------- | --------------------------------- | ------- | -------- | -------------------------- |
+| primitive                                               | number                            |         | true     | Description of prop \\"foo\\". |
+| [literalsAndUnion](#markdown-header-literals-and-union) | 'string' | 'otherstring' | number |         | true     | Description of prop \\"bar\\". |
+| [arr](#markdown-header-arr)                             | Array<any>                        |         | true     |                            |
+| [func](#markdown-header-func)                           | (value: string) => void           |         | false    |                            |
+| [obj](#markdown-header-obj)                             | { subvalue: ?boolean }            |         | false    |                            |
 "
 `;
 
@@ -932,35 +890,10 @@ exports[`Docs to markdown Should handle various input should convert FlowFooter 
 "# FlowFooter
 
 ## Props
-| Name                                | Type  | Default | Required | Description                                                                                          |
-| ----------------------------------- | ----- | ------- | -------- | ---------------------------------------------------------------------------------------------------- |
-| [social](#markdown-header-social)   | Array |         | true     | An array of social links                                                                             |
-| [columns](#markdown-header-columns) | Array |         | true     | An array of columns, where each column contains an array or either LinkModels or plain string labels |
-
-## Complex Props
-
-### social
-Type: _Array_
-
-An array of social links
-
-\`\`\`
-SocialModel
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### columns
-Type: _Array_
-
-An array of columns, where each column contains an array or either LinkModels or plain string labels
-
-Should be one of the following:
-
-\`\`\`
-LinkModel
-string
-\`\`\`
+| Name                                | Type                             | Default | Required | Description                                                                                          |
+| ----------------------------------- | -------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| [social](#markdown-header-social)   | Array<SocialModel>               |         | true     | An array of social links                                                                             |
+| [columns](#markdown-header-columns) | Array<Array<LinkModel | string>> |         | true     | An array of columns, where each column contains an array or either LinkModels or plain string labels |
 "
 `;
 
@@ -968,85 +901,22 @@ exports[`Docs to markdown Should handle various input should convert FlowImageMo
 "# FlowImageModel
 
 ## Props
-| Name                                         | Type    | Default | Required | Description                                                                                                                  |
-| -------------------------------------------- | ------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| src                                          | string  |         | true     | Image src URL                                                                                                                |
-| height                                       | number  |         | true     | Original image height                                                                                                        |
-| width                                        | number  |         | true     | Original image width                                                                                                         |
-| alt                                          | string  |         | false    | Image alt text                                                                                                               |
-| contain                                      | boolean | false   | false    | Contain the image inside the area, instead of cropping                                                                       |
-| [alignX](#markdown-header-align-x)           | Union   |         | false    | Align the image on X axis, default to center in the browser                                                                  |
-| [alignY](#markdown-header-align-y)           | Union   |         | false    | Align the image on Y axis, default to center in the browser                                                                  |
-| [crop](#markdown-header-crop)                | Union   |         | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                           |
-| fill                                         | boolean | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                         |
-| maxAspectRatio                               | number  |         | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall. |
-| [imgixParams](#markdown-header-imgix-params) | Object  |         | false    | Any custom Imgix params                                                                                                      |
-| imageProps                                   | Object  |         | false    | Extra tags to pass as img HTML attributes                                                                                    |
-| fadeIn                                       | boolean | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                             |
-| disableBlur                                  | boolean | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                       |
-
-## Complex Props
-
-### alignX
-Type: _Union_
-
-Align the image on X axis, default to center in the browser
-
-Should be one of the following:
-
-\`\`\`
-'left'
-'right'
-'center'
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### alignY
-Type: _Union_
-
-Align the image on Y axis, default to center in the browser
-
-Should be one of the following:
-
-\`\`\`
-'top'
-'bottom'
-'center'
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### crop
-Type: _Union_
-
-The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop
-
-Should be one of the following:
-
-\`\`\`
-'faces'
-'entropy'
-'edges'
-'top'
-'bottom'
-'left'
-'right'
-''
-\`\`\`
-
---------------------------------------------------------------------------------
-
-### imgixParams
-Type: _Object_
-
-Any custom Imgix params
-
-\`\`\`
-{
-  [key: string]: string,
-}
-\`\`\`
+| Name                                         | Type                                                                                                                    | Default | Required | Description                                                                                                                  |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| src                                          | string                                                                                                                  |         | true     | Image src URL                                                                                                                |
+| height                                       | number                                                                                                                  |         | true     | Original image height                                                                                                        |
+| width                                        | number                                                                                                                  |         | true     | Original image width                                                                                                         |
+| alt                                          | string                                                                                                                  |         | false    | Image alt text                                                                                                               |
+| contain                                      | boolean                                                                                                                 | false   | false    | Contain the image inside the area, instead of cropping                                                                       |
+| [alignX](#markdown-header-align-x)           | 'left' | 'right' | 'center'                                                                                             |         | false    | Align the image on X axis, default to center in the browser                                                                  |
+| [alignY](#markdown-header-align-y)           | 'top' | 'bottom' | 'center'                                                                                             |         | false    | Align the image on Y axis, default to center in the browser                                                                  |
+| [crop](#markdown-header-crop)                | 'faces'<br>  | 'entropy'<br>  | 'edges'<br>  | 'top'<br>  | 'bottom'<br>  | 'left'<br>  | 'right'<br>  | ''<br>  | null |         | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                           |
+| fill                                         | boolean                                                                                                                 | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                         |
+| maxAspectRatio                               | number                                                                                                                  |         | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall. |
+| [imgixParams](#markdown-header-imgix-params) | {<br>  [key: string]: string,<br>}                                                                                      |         | false    | Any custom Imgix params                                                                                                      |
+| imageProps                                   | Object                                                                                                                  |         | false    | Extra tags to pass as img HTML attributes                                                                                    |
+| fadeIn                                       | boolean                                                                                                                 | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                             |
+| disableBlur                                  | boolean                                                                                                                 | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                       |
 "
 `;
 
@@ -1057,28 +927,12 @@ The LinkModel is used for all navigation links.
 
 
 ## Props
-| Name                              | Type   | Default | Required | Description                                                                                            |
-| --------------------------------- | ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------ |
-| href                              | string |         | true     |                                                                                                        |
-| label                             | string |         | false    | Label is the related label or text for the link or button                                              |
-| title                             | string |         | false    | The title HTML Attribute, can be used to create a title tooltip. It should be different from the label |
-| [target](#markdown-header-target) | Union  |         | false    | The anchor target, uses the browser default (_self) if not set                                         |
-
-## Complex Props
-
-### target
-Type: _Union_
-
-The anchor target, uses the browser default (_self) if not set
-
-Should be one of the following:
-
-\`\`\`
-'_blank'
-'_self'
-'_parent'
-'_top'
-\`\`\`
+| Name                              | Type                                    | Default | Required | Description                                                                                            |
+| --------------------------------- | --------------------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| href                              | string                                  |         | true     |                                                                                                        |
+| label                             | string                                  |         | false    | Label is the related label or text for the link or button                                              |
+| title                             | string                                  |         | false    | The title HTML Attribute, can be used to create a title tooltip. It should be different from the label |
+| [target](#markdown-header-target) | '_blank' | '_self' | '_parent' | '_top' |         | false    | The anchor target, uses the browser default (_self) if not set                                         |
 "
 `;
 
