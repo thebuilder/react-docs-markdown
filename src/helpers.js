@@ -1,5 +1,4 @@
 import kebab from 'lodash/fp/kebabCase'
-import capitalize from 'lodash/fp/capitalize'
 
 export function isFlowType(prop) {
   return !!prop.flowType
@@ -50,6 +49,8 @@ export function getTypeName(type) {
     case 'union':
     case 'literalsAndUnion':
       return 'Union'
+    case 'custom':
+      return formatCustomType(type.raw)
     case 'shape':
     case 'signature':
       return 'Object'

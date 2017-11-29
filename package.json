@@ -8,7 +8,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src test",
-    "lint-staged": "lint-staged",
+    "precommit": "lint-staged",
+    "postcommit": "git reset",
     "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
   },
@@ -61,9 +62,9 @@
     "eslint-config-insilico": "^5.0.1",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-import": "^2.7.0",
+    "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "lint-staged": "^4.2.3",
-    "pre-commit": "^1.2.2",
+    "lint-staged": "^5.0.0",
     "react-docgen": "^2.19.0",
     "rimraf": "^2.6.2"
   },
