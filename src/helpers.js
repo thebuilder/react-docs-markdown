@@ -28,7 +28,7 @@ export function getDefaultValue(prop) {
 }
 
 export function getKey(key, type) {
-  if (isComplexType(type.name)) {
+  if (type && isComplexType(type.name)) {
     // TODO: Add support for Github markdown?
     // Add Bitbucket header link
     return `[${key}](#markdown-header-${kebab(key)})`
@@ -83,10 +83,8 @@ export function filterProps(
 ) {
   if (!getType(prop)) {
     // eslint-disable-next-line no-console
-    console.error(
-      `Found prop '${
-        name
-      }' without type. Has it been removed, but left in 'defaultProps'?`,
+    throw new Error(
+      `Found prop '${name}' without type. Has it been removed, but left in 'defaultProps'?`,
     )
   }
   if (excludeKey && excludeKey.test(name)) return false
