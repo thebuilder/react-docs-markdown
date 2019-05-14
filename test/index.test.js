@@ -15,6 +15,7 @@ const inputs = [
   require('./input/FlowFooter.json'),
   require('./input/FlowImageModel.json'),
   require('./input/FlowLinkModel.json'),
+  require('./input/TSImageModel.json'),
 ]
 
 describe('Docs to markdown', () => {

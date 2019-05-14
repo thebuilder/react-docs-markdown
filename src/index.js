@@ -5,7 +5,7 @@ import {
   getType,
   getTypeName,
   filterProps,
-  isFlowType,
+  isFlowOrTSType,
 } from './helpers'
 import { describeSubTypes } from './types'
 
@@ -28,15 +28,15 @@ function addProps(props, options) {
   )
 
   let output = '\n## Props\n'
-  let isFlow = false
+  let isFlowOrTS = false
   const items = [
     TABLE_HEADERS,
     ...keys.map(key => {
       const prop = filteredProps[key]
-      if (isFlowType(prop)) isFlow = true
+      if (isFlowOrTSType(prop)) isFlowOrTS = true
 
       const row = [
-        isFlowType(prop) ? key : getKey(key, getType(prop)),
+        isFlowOrTSType(prop) ? key : getKey(key, getType(prop)),
         getTypeName(getType(prop)),
         getDefaultValue(prop),
         prop.required,
@@ -54,7 +54,7 @@ function addProps(props, options) {
   output += `${table(items)}\n`
 
   // Add subtypes
-  if (!isFlow) {
+  if (!isFlowOrTS) {
     const subTypes = describeSubTypes(filteredProps)
     if (subTypes.length) {
       output += '\n## Complex Props\n'

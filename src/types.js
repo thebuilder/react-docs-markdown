@@ -3,7 +3,7 @@ import {
   getKey,
   getType,
   getTypeName,
-  isFlowType,
+  isFlowOrTSType,
   isComplexType,
   blockquote,
 } from './helpers'
@@ -19,7 +19,7 @@ export function describeSubTypes(types, level = 0) {
     // Type can either be on the prop, or in the type field depending on depth.
     const type = getType(prop) || prop
     if (isComplexType(type.name)) {
-      const result = isFlowType(prop)
+      const result = isFlowOrTSType(prop)
         ? describeFlowType(type, level)
         : describeType(type, level)
 

@@ -1309,6 +1309,29 @@ The method used when cropping the image: https://docs.imgix.com/apis/url/size/cr
 "
 `;
 
+exports[`Docs to markdown Should handle various input should convert TSImageModel 1`] = `
+"# TSImageModel
+
+## Props
+| Name           | Type                                                                                                                                                            | Default | Required | Description                                                                                                                  |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| src            | string                                                                                                                                                          |         | true     | Image src URL                                                                                                                |
+| height         | number                                                                                                                                                          |         | true     | Original image height                                                                                                        |
+| width          | number                                                                                                                                                          |         | true     | Original image width                                                                                                         |
+| alt            | string                                                                                                                                                          |         | false    | Image alt text                                                                                                               |
+| contain        | boolean                                                                                                                                                         | false   | false    | Contain the image inside the area, instead of cropping                                                                       |
+| alignX         | 'left' &#124; 'right' &#124; 'center'                                                                                                                           |         | false    | Align the image on X axis, default to center in the browser                                                                  |
+| alignY         | 'top' &#124; 'bottom' &#124; 'center'                                                                                                                           |         | false    | Align the image on Y axis, default to center in the browser                                                                  |
+| crop           | 'faces'<br>  &#124; 'entropy'<br>  &#124; 'edges'<br>  &#124; 'top'<br>  &#124; 'bottom'<br>  &#124; 'left'<br>  &#124; 'right'<br>  &#124; ''<br>  &#124; null |         | false    | The method used when cropping the image: https://docs.imgix.com/apis/url/size/crop                                           |
+| fill           | boolean                                                                                                                                                         | false   | false    | Fill the container element. On mobile it will revert to aspect ratio                                                         |
+| maxAspectRatio | number                                                                                                                                                          |         | false    | The maximum aspect ratio to use after (height / width) - Adds some sanity to editor images, to ensure they are not too tall. |
+| imgixParams    | {<br>  &#91;key: string&#93;: string,<br>}                                                                                                                      |         | false    | Any custom Imgix params                                                                                                      |
+| imageProps     | Object                                                                                                                                                          |         | false    | Extra tags to pass as img HTML attributes                                                                                    |
+| fadeIn         | boolean                                                                                                                                                         | false   | false    | Fade in the image when it's loaded. Creates a nice effect with the blurred image                                             |
+| disableBlur    | boolean                                                                                                                                                         | false   | false    | Disable the blurred placeholder shown until size is ready. Will instead show a spinner                                       |
+"
+`;
+
 exports[`Docs to markdown Should handle various input should convert TextArea 1`] = `
 "# TextArea
 

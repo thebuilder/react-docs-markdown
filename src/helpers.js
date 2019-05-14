@@ -1,11 +1,11 @@
 import kebab from 'lodash/fp/kebabCase'
 
-export function isFlowType(prop) {
-  return !!prop.flowType
+export function isFlowOrTSType(prop) {
+  return !!prop.flowType || !!prop.tsType
 }
 
 export function getType(prop) {
-  return prop.type || prop.flowType
+  return prop.type || prop.flowType || prop.tsType
 }
 
 export function getDefaultValue(prop) {
