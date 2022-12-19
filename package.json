@@ -71,6 +71,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "markdown-table": "^1.1.0"
+    "markdown-table": "^2.0.0"
   }
 }
